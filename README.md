@@ -280,7 +280,7 @@ Users can upload books and search within their own session.
 
 # 👩‍💻 Author
 
-**Name:** Pavithra B  
+**Name:** Tanushri V
 
 **Course:** B.Tech – Information Science and Engineering  
 
@@ -297,7 +297,7 @@ E-Book Chapter and Section Search System
 # 📌 GitHub Repository
 
 ```
-https://github.com/pavithraB-wec/ebook-chapter-section-search-system
+https://github.com/Tanushrivillalan24/ebook-chapter-and-section-system
 ```
 
 ---
