@@ -1,0 +1,4607 @@
+[
+    {
+        "book": "Machine Learning For Absolute Beginners",
+        "chapters": [
+            {
+                "chapter_title": "0. This means that if the",
+                "page": 83,
+                "sections": [
+                    {
+                        "text": "sum is a positive number or zero, the output is 1. If the sum is a negative",
+                        "page": 83
+                    },
+                    {
+                        "text": "number, the output is 0.",
+                        "page": 83
+                    },
+                    {
+                        "text": "Figure 7: Activation function where the output (y) is 0 when x is negative, and the output (y) is 1 when x is positive",
+                        "page": 83
+                    },
+                    {
+                        "text": "Thus:",
+                        "page": 83
+                    },
+                    {
+                        "text": "Input 1:",
+                        "page": 83
+                    },
+                    {
+                        "text": "24 * 0.5 = 12",
+                        "page": 83
+                    },
+                    {
+                        "text": "Input 2:",
+                        "page": 83
+                    },
+                    {
+                        "text": "16 * -1.0 = -16",
+                        "page": 83
+                    },
+                    {
+                        "text": "Sum (\u03a3):",
+                        "page": 83
+                    },
+                    {
+                        "text": "12 + -16 = - 4",
+                        "page": 83
+                    },
+                    {
+                        "text": "As a numeric value less than zero, our result will register as \u201c0\u201d and therefore",
+                        "page": 83
+                    },
+                    {
+                        "text": "not trigger the activation function of the perceptron.",
+                        "page": 83
+                    },
+                    {
+                        "text": "However, we can also modify the activation threshold to a completely",
+                        "page": 83
+                    },
+                    {
+                        "text": "different rule, such as:",
+                        "page": 84
+                    },
+                    {
+                        "text": "x >",
+                        "page": 84
+                    },
+                    {
+                        "text": "3, y = 1",
+                        "page": 84
+                    },
+                    {
+                        "text": "x \u2264 3, y = 0",
+                        "page": 84
+                    },
+                    {
+                        "text": "Figure 8: Activation function where the output (y) is 0 when x is equal or less than 3, and the output (y) is 1 when x is greater than 3",
+                        "page": 84
+                    },
+                    {
+                        "text": "When working with a larger model of neural network layers, a value of \u201c1\u201d",
+                        "page": 84
+                    },
+                    {
+                        "text": "will be configured to pass the output to the next layer. Conversely, a \u201c0\u201d",
+                        "page": 84
+                    },
+                    {
+                        "text": "value is configured to be ignored and will not be passed to the next layer for",
+                        "page": 84
+                    },
+                    {
+                        "text": "processing.",
+                        "page": 84
+                    },
+                    {
+                        "text": "In supervised learning, perceptrons can be used to train data and develop a",
+                        "page": 84
+                    },
+                    {
+                        "text": "prediction model. The steps to training data are as follows:",
+                        "page": 84
+                    },
+                    {
+                        "text": "1)",
+                        "page": 84
+                    },
+                    {
+                        "text": "Inputs are fed into the processor (neurons/nodes).",
+                        "page": 84
+                    },
+                    {
+                        "text": "2)",
+                        "page": 84
+                    },
+                    {
+                        "text": "The perceptron estimates the value of those inputs.",
+                        "page": 84
+                    },
+                    {
+                        "text": "3)",
+                        "page": 84
+                    },
+                    {
+                        "text": "The perceptron computes the error between the estimate and the",
+                        "page": 84
+                    },
+                    {
+                        "text": "actual value.",
+                        "page": 84
+                    },
+                    {
+                        "text": "4)",
+                        "page": 84
+                    },
+                    {
+                        "text": "The perceptron adjusts its weights according to the error.",
+                        "page": 84
+                    },
+                    {
+                        "text": "5)",
+                        "page": 84
+                    },
+                    {
+                        "text": "Repeat the previous four steps until you are satisfied with the",
+                        "page": 84
+                    },
+                    {
+                        "text": "model\u2019s accuracy. The training model can then be applied to the test",
+                        "page": 84
+                    },
+                    {
+                        "text": "data.",
+                        "page": 84
+                    },
+                    {
+                        "text": "The weakness of a perceptron is that, because the output is binary (1 or 0),",
+                        "page": 84
+                    },
+                    {
+                        "text": "small changes in the weights or bias in any single perceptron within a larger",
+                        "page": 84
+                    },
+                    {
+                        "text": "neural network can induce polarizing results. This can lead to dramatic",
+                        "page": 84
+                    },
+                    {
+                        "text": "changes within the network and a complete flip in regards to the final output.",
+                        "page": 84
+                    },
+                    {
+                        "text": "As a result, this makes it very difficult to train an accurate model that can be",
+                        "page": 84
+                    },
+                    {
+                        "text": "successfully applied to test data and future data inputs.",
+                        "page": 84
+                    },
+                    {
+                        "text": "An alternative to the perceptron is the",
+                        "page": 84
+                    },
+                    {
+                        "text": "sigmoid neuron",
+                        "page": 84
+                    },
+                    {
+                        "text": ". A sigmoid neuron is",
+                        "page": 84
+                    },
+                    {
+                        "text": "very similar to a perceptron, but the presence of a sigmoid function rather",
+                        "page": 85
+                    },
+                    {
+                        "text": "than a binary model now accepts any value between 0 and 1. This enables",
+                        "page": 85
+                    },
+                    {
+                        "text": "more flexibility to absorb small changes in edge weights without triggering",
+                        "page": 85
+                    },
+                    {
+                        "text": "inverse results\u2014as the output is no longer binary. In other words, the output",
+                        "page": 85
+                    },
+                    {
+                        "text": "result won\u2019t flip just because of one minor change to an edge weight or input",
+                        "page": 85
+                    },
+                    {
+                        "text": "value.",
+                        "page": 85
+                    },
+                    {
+                        "text": "Figure 9: The sigmoid equation, as first seen in logistic regression",
+                        "page": 85
+                    },
+                    {
+                        "text": "While more flexible than a perceptron, a sigmoid neuron cannot generate",
+                        "page": 85
+                    },
+                    {
+                        "text": "negative values. Hence, a third option is the",
+                        "page": 85
+                    },
+                    {
+                        "text": "hyperbolic tangent function",
+                        "page": 85
+                    },
+                    {
+                        "text": ".",
+                        "page": 85
+                    },
+                    {
+                        "text": "Figure 10: A hyperbolic tangent function graph",
+                        "page": 85
+                    },
+                    {
+                        "text": "We have so far discussed basic neural networks; to create a more advanced",
+                        "page": 85
+                    },
+                    {
+                        "text": "neural network, we can link sigmoid neurons and other classifiers to create a",
+                        "page": 85
+                    },
+                    {
+                        "text": "network with a higher number of layers or combine multiple perceptrons to",
+                        "page": 85
+                    },
+                    {
+                        "text": "form a multi-layer perceptron.",
+                        "page": 85
+                    },
+                    {
+                        "text": "For analyzing simple patterns, a basic neural network or an alternative",
+                        "page": 85
+                    },
+                    {
+                        "text": "classification tool such as logistic regression and",
+                        "page": 85
+                    },
+                    {
+                        "text": "k",
+                        "page": 85
+                    },
+                    {
+                        "text": "-nearest neighbors is",
+                        "page": 85
+                    },
+                    {
+                        "text": "generally sufficient for the purpose of analysis. However, as the patterns in",
+                        "page": 86
+                    },
+                    {
+                        "text": "the data become more complicated\u2014especially in the form of a high number",
+                        "page": 86
+                    },
+                    {
+                        "text": "of inputs such as the total number of pixels in an image\u2014a basic or shallow",
+                        "page": 86
+                    },
+                    {
+                        "text": "model is no longer reliable or capable of analysis. This is because the model",
+                        "page": 86
+                    },
+                    {
+                        "text": "becomes exponentially complex as the number of inputs rises and in the case",
+                        "page": 86
+                    },
+                    {
+                        "text": "of neural networks this means more layers to manage more input nodes. A",
+                        "page": 86
+                    },
+                    {
+                        "text": "neural network, with a deep number of layers, however, is able to break down",
+                        "page": 86
+                    },
+                    {
+                        "text": "complex patterns into simpler patterns as demonstrated in Figure 11.",
+                        "page": 86
+                    },
+                    {
+                        "text": "Figure 11: Facial recognition using deep learning.",
+                        "page": 86
+                    },
+                    {
+                        "text": "Source: kdnuggets.com",
+                        "page": 86
+                    },
+                    {
+                        "text": "This deep network uses edges to detect different physical features to",
+                        "page": 86
+                    },
+                    {
+                        "text": "recognize faces, such as a diagonal line. Like building blocks, the network",
+                        "page": 86
+                    },
+                    {
+                        "text": "combines the node results to classify the input as, say, a human\u2019s face or a",
+                        "page": 86
+                    },
+                    {
+                        "text": "cat\u2019s face and then processes that further to recognize a specific individual\u2019s",
+                        "page": 86
+                    },
+                    {
+                        "text": "face.",
+                        "page": 86
+                    },
+                    {
+                        "text": "This is known as deep learning. What makes deep learning \u201cdeep\u201d is the",
+                        "page": 86
+                    },
+                    {
+                        "text": "stacking of at least 5-10 node layers, with advanced object recognition using",
+                        "page": 86
+                    },
+                    {
+                        "text": "upwards of 150 layers.",
+                        "page": 86
+                    },
+                    {
+                        "text": "Object recognition, as used by self-driving vehicles to recognize objects such",
+                        "page": 86
+                    },
+                    {
+                        "text": "as pedestrians and other vehicles, is a popular application of deep learning",
+                        "page": 86
+                    },
+                    {
+                        "text": "today. Other common applications of deep learning include time series",
+                        "page": 86
+                    },
+                    {
+                        "text": "analysis to analyze data trends measured over particular time periods or",
+                        "page": 87
+                    },
+                    {
+                        "text": "intervals, speech recognition, and text processing tasks including sentiment",
+                        "page": 87
+                    },
+                    {
+                        "text": "analysis, topic segmentation, and named entity recognition. More usage",
+                        "page": 87
+                    },
+                    {
+                        "text": "scenarios and commonly paired deep learning techniques are listed in Figure",
+                        "page": 87
+                    },
+                    {
+                        "text": "12.",
+                        "page": 87
+                    },
+                    {
+                        "text": "Figure 12: Common usage scenarios and paired deep learning techniques",
+                        "page": 87
+                    },
+                    {
+                        "text": "As can be seen from the table, multi-layer perceptrons have been largely",
+                        "page": 87
+                    },
+                    {
+                        "text": "superseded by new deep learning techniques such as convolution networks,",
+                        "page": 87
+                    },
+                    {
+                        "text": "recurrent networks, deep belief networks, and recursive neural tensor",
+                        "page": 87
+                    },
+                    {
+                        "text": "networks (RNTN). These more advanced iterations of a neural network can",
+                        "page": 87
+                    },
+                    {
+                        "text": "be used effectively across a number of practical applications that are",
+                        "page": 87
+                    },
+                    {
+                        "text": "currently in vogue today. Although convolution networks are arguably the",
+                        "page": 87
+                    },
+                    {
+                        "text": "most popular and powerful of deep learning techniques, new methods and",
+                        "page": 87
+                    },
+                    {
+                        "text": "variations are continuously evolving.",
+                        "page": 87
+                    },
+                    {
+                        "text": "11",
+                        "page": 88
+                    },
+                    {
+                        "text": "DECISION TREES",
+                        "page": 89
+                    },
+                    {
+                        "text": "The fact that neural networks can be applied to a broader range of machine",
+                        "page": 89
+                    },
+                    {
+                        "text": "learning problems than any other technique has led some pundits to hail",
+                        "page": 89
+                    },
+                    {
+                        "text": "neural networks as the ultimate machine learning algorithm. However, this is",
+                        "page": 89
+                    },
+                    {
+                        "text": "not to say that neural networks fit the bill as a statistical silver bullet. In",
+                        "page": 89
+                    },
+                    {
+                        "text": "various cases, neural networks fall short and decision trees are held up as a",
+                        "page": 89
+                    },
+                    {
+                        "text": "popular counterargument.",
+                        "page": 89
+                    },
+                    {
+                        "text": "The massive reserve of data and computational resources that neural",
+                        "page": 89
+                    },
+                    {
+                        "text": "networks demand is one obvious pitfall. Only after training on millions of",
+                        "page": 89
+                    },
+                    {
+                        "text": "tagged examples can Google's image recognition engine reliably recognize",
+                        "page": 89
+                    },
+                    {
+                        "text": "classes of simple objects (such as dogs). But how many dog pictures do you",
+                        "page": 89
+                    },
+                    {
+                        "text": "need to show to the average four-year-old before they \u201cget it?\u201d",
+                        "page": 89
+                    },
+                    {
+                        "text": "Decision trees, on the other hand, provide high-level efficiency and easy",
+                        "page": 89
+                    },
+                    {
+                        "text": "interpretation. These two benefits make this simple algorithm popular in the",
+                        "page": 89
+                    },
+                    {
+                        "text": "space of machine learning.",
+                        "page": 89
+                    },
+                    {
+                        "text": "As a supervised learning technique, decision trees are used primarily for",
+                        "page": 89
+                    },
+                    {
+                        "text": "solving classification problems, but they can be applied to solve regression",
+                        "page": 89
+                    },
+                    {
+                        "text": "problems too.",
+                        "page": 89
+                    },
+                    {
+                        "text": "Figure 1: Example of a regression tree.",
+                        "page": 89
+                    },
+                    {
+                        "text": "Source: http://freakonometrics.hypotheses.org/",
+                        "page": 89
+                    },
+                    {
+                        "text": "Figure 2: Example of a classification tree.",
+                        "page": 90
+                    },
+                    {
+                        "text": "Source: http://blog.akanoo.com",
+                        "page": 90
+                    },
+                    {
+                        "text": "Classification trees can use quantitative and categorical data to model",
+                        "page": 90
+                    },
+                    {
+                        "text": "categorical outcomes. Regression trees also use quantitative and categorical",
+                        "page": 90
+                    },
+                    {
+                        "text": "data but instead model quantitative outcomes.",
+                        "page": 90
+                    },
+                    {
+                        "text": "Decision trees start with a root node, which acts as a starting point (at the",
+                        "page": 90
+                    },
+                    {
+                        "text": "top), and is followed by splits that produce branches. The",
+                        "page": 90
+                    },
+                    {
+                        "text": "statistical/mathematical term for these branches is",
+                        "page": 90
+                    },
+                    {
+                        "text": "edges",
+                        "page": 90
+                    },
+                    {
+                        "text": ". The branches then",
+                        "page": 90
+                    },
+                    {
+                        "text": "link to leaves, known also as nodes, which form decision points. A final",
+                        "page": 90
+                    },
+                    {
+                        "text": "categorization is produced when a leaf does not generate any new branches",
+                        "page": 90
+                    },
+                    {
+                        "text": "and results in what is known as a terminal node.",
+                        "page": 90
+                    },
+                    {
+                        "text": "Decision trees thus not only break down and explain how classification or",
+                        "page": 90
+                    },
+                    {
+                        "text": "regression is formulated, but they also produce a neat visual flowchart you",
+                        "page": 90
+                    },
+                    {
+                        "text": "can show to others. The ease of interpretation is a strong advantage of using",
+                        "page": 90
+                    },
+                    {
+                        "text": "decision trees, and they can be applied to a wide range of use cases.",
+                        "page": 90
+                    },
+                    {
+                        "text": "Real-life examples include picking a scholarship recipient, assessing an",
+                        "page": 90
+                    },
+                    {
+                        "text": "applicant for a home loan, predicting e-commerce sales, or selecting the right",
+                        "page": 90
+                    },
+                    {
+                        "text": "job applicant. When a customer or applicant queries why they weren\u2019t",
+                        "page": 90
+                    },
+                    {
+                        "text": "selected for a particular scholarship, home loan, job, etc., you can pass them",
+                        "page": 90
+                    },
+                    {
+                        "text": "the decision tree and let them see the decision-making process for",
+                        "page": 90
+                    },
+                    {
+                        "text": "themselves.",
+                        "page": 90
+                    },
+                    {
+                        "text": "Building a Decision Tree",
+                        "page": 90
+                    },
+                    {
+                        "text": "Decision trees are built by first splitting data into two groups. This binary",
+                        "page": 91
+                    },
+                    {
+                        "text": "splitting process is then repeated at each branch (layer). The aim is to select a",
+                        "page": 91
+                    },
+                    {
+                        "text": "binary question that best splits the data into two homogenous groups at each",
+                        "page": 91
+                    },
+                    {
+                        "text": "branch of the tree, such that it minimizes the level of data entropy at the next.",
+                        "page": 91
+                    },
+                    {
+                        "text": "Entropy is a mathematical term that explains the measure of variance in the",
+                        "page": 91
+                    },
+                    {
+                        "text": "data among different classes. In simple terms, we want the data at each layer",
+                        "page": 91
+                    },
+                    {
+                        "text": "to be more homogenous than at the last.",
+                        "page": 91
+                    },
+                    {
+                        "text": "We thus want to pick a \u201cgreedy\u201d algorithm that can reduce the level of",
+                        "page": 91
+                    },
+                    {
+                        "text": "entropy at each layer of the tree. One such greedy algorithm is the Iterative",
+                        "page": 91
+                    },
+                    {
+                        "text": "Dichotomizer (ID3), invented by J.R. Quinlan. This is one of three decision",
+                        "page": 91
+                    },
+                    {
+                        "text": "tree implementations developed by Quinlan, hence the \u201c3.\u201d",
+                        "page": 91
+                    },
+                    {
+                        "text": "ID3 applies entropy to determine which binary question to ask at each layer",
+                        "page": 91
+                    },
+                    {
+                        "text": "of the decision tree. At each layer, ID3 identifies a variable (converted into a",
+                        "page": 91
+                    },
+                    {
+                        "text": "binary question) that will produce the least entropy at the next layer. Let\u2019s",
+                        "page": 91
+                    },
+                    {
+                        "text": "consider the following example to better understand how this works.",
+                        "page": 91
+                    },
+                    {
+                        "text": "Variable 1 (exceeded Key Performance Indicators) produces:",
+                        "page": 91
+                    },
+                    {
+                        "text": "- Six promoted employees who exceeded their KPIs (Yes)",
+                        "page": 91
+                    },
+                    {
+                        "text": "- Four employees who didn\u2019t exceed their KPIs and who were not promoted",
+                        "page": 91
+                    },
+                    {
+                        "text": "(No)",
+                        "page": 91
+                    },
+                    {
+                        "text": "This variable produces two homogenous groups at the next layer of the",
+                        "page": 91
+                    },
+                    {
+                        "text": "decision tree.",
+                        "page": 91
+                    },
+                    {
+                        "text": "Black = Promoted, White = Not Promoted",
+                        "page": 92
+                    },
+                    {
+                        "text": "Variable 2 (leadership capability) produces:",
+                        "page": 92
+                    },
+                    {
+                        "text": "-",
+                        "page": 92
+                    },
+                    {
+                        "text": "Two promoted employees with leadership capabilities (Yes)",
+                        "page": 92
+                    },
+                    {
+                        "text": "-",
+                        "page": 92
+                    },
+                    {
+                        "text": "Four promoted employees with no leadership capabilities (No)",
+                        "page": 92
+                    },
+                    {
+                        "text": "-",
+                        "page": 92
+                    },
+                    {
+                        "text": "Two employees with leadership capabilities who were not promoted",
+                        "page": 92
+                    },
+                    {
+                        "text": "(Yes)",
+                        "page": 92
+                    },
+                    {
+                        "text": "-",
+                        "page": 92
+                    },
+                    {
+                        "text": "Two employees with no leadership capabilities who were not",
+                        "page": 92
+                    },
+                    {
+                        "text": "promoted (No)",
+                        "page": 92
+                    },
+                    {
+                        "text": "This variable produces two groups of mixed data points.",
+                        "page": 92
+                    },
+                    {
+                        "text": "Black = Promoted, White = Not Promoted",
+                        "page": 92
+                    },
+                    {
+                        "text": "Variable 3 (aged under thirty) produces:",
+                        "page": 93
+                    },
+                    {
+                        "text": "-",
+                        "page": 93
+                    },
+                    {
+                        "text": "Three promoted employees aged under thirty (Yes)",
+                        "page": 93
+                    },
+                    {
+                        "text": "-",
+                        "page": 93
+                    },
+                    {
+                        "text": "Three promoted employees aged over thirty (No)",
+                        "page": 93
+                    },
+                    {
+                        "text": "-",
+                        "page": 93
+                    },
+                    {
+                        "text": "Four employees aged under thirty who were not promoted (Yes)",
+                        "page": 93
+                    },
+                    {
+                        "text": "This variable produces one homogenous group and one mixed group of data",
+                        "page": 93
+                    },
+                    {
+                        "text": "points.",
+                        "page": 93
+                    },
+                    {
+                        "text": "Black = Promoted, White = Not Promoted",
+                        "page": 93
+                    },
+                    {
+                        "text": "Of these three variables, variable 1 (Exceeded KPIs) produces the best result",
+                        "page": 93
+                    },
+                    {
+                        "text": "with two perfectly homogenous groups. Variable 3 produces the second best",
+                        "page": 93
+                    },
+                    {
+                        "text": "result, as one leaf is homogenous. Variable 2 produces two leaves that are not",
+                        "page": 93
+                    },
+                    {
+                        "text": "homogenous. Variable 1 would therefore be selected as the first binary",
+                        "page": 93
+                    },
+                    {
+                        "text": "question to split this dataset.",
+                        "page": 93
+                    },
+                    {
+                        "text": "Whether it is ID3 or another algorithm, this process of splitting data into",
+                        "page": 93
+                    },
+                    {
+                        "text": "binary partitions, known as",
+                        "page": 93
+                    },
+                    {
+                        "text": "recursive partitioning",
+                        "page": 93
+                    },
+                    {
+                        "text": ", is repeated until a stopping",
+                        "page": 93
+                    },
+                    {
+                        "text": "criterion is met. This stopping point could be based on a range of criteria,",
+                        "page": 93
+                    },
+                    {
+                        "text": "such as:",
+                        "page": 93
+                    },
+                    {
+                        "text": "-",
+                        "page": 93
+                    },
+                    {
+                        "text": "When all leaves contain less than 3-5 items",
+                        "page": 93
+                    },
+                    {
+                        "text": "-",
+                        "page": 93
+                    },
+                    {
+                        "text": "When a branch produces a result that places all items in one binary",
+                        "page": 93
+                    },
+                    {
+                        "text": "leaf",
+                        "page": 93
+                    },
+                    {
+                        "text": "Figure 3: Example of a stopping criteria",
+                        "page": 94
+                    },
+                    {
+                        "text": "A caveat to remember when using decision trees is their susceptibility to",
+                        "page": 94
+                    },
+                    {
+                        "text": "overfitting. The cause of overfitting, in this case, is the training data. Taking",
+                        "page": 94
+                    },
+                    {
+                        "text": "into account the patterns that exist in your training data, a decision tree is",
+                        "page": 94
+                    },
+                    {
+                        "text": "precise at training the first round of data. However, the same decision tree",
+                        "page": 94
+                    },
+                    {
+                        "text": "may then fail to predict the test data, as there could be rules that it is yet to",
+                        "page": 94
+                    },
+                    {
+                        "text": "encounter or because the training or test data were not representative of the",
+                        "page": 94
+                    },
+                    {
+                        "text": "entire dataset. Moreover, because decision trees are formed from repeatedly",
+                        "page": 94
+                    },
+                    {
+                        "text": "splitting data points into two partitions, a slight change in how the data is",
+                        "page": 94
+                    },
+                    {
+                        "text": "split at the top or middle of the tree can dramatically alter the final prediction.",
+                        "page": 94
+                    },
+                    {
+                        "text": "This can produce a different tree altogether! The offender, in this case, is our",
+                        "page": 94
+                    },
+                    {
+                        "text": "greedy algorithm.",
+                        "page": 94
+                    },
+                    {
+                        "text": "From the very first split of the data, the greedy algorithm fixes its attention on",
+                        "page": 94
+                    },
+                    {
+                        "text": "picking a binary question that best partitions data into two homogenous",
+                        "page": 94
+                    },
+                    {
+                        "text": "groups. Like a boy sitting in front of a box of cupcakes, the greedy algorithm",
+                        "page": 94
+                    },
+                    {
+                        "text": "is oblivious to the future repercussions of its short-term actions. The binary",
+                        "page": 94
+                    },
+                    {
+                        "text": "question it uses to initially split the data does not guarantee the most accurate",
+                        "page": 94
+                    },
+                    {
+                        "text": "final prediction. Rather, a less effective initial split may produce a more",
+                        "page": 94
+                    },
+                    {
+                        "text": "accurate outcome.",
+                        "page": 94
+                    },
+                    {
+                        "text": "In sum, decision trees are highly visual and effective at classifying a single",
+                        "page": 94
+                    },
+                    {
+                        "text": "set of data, but they can be inflexible and vulnerable to overfitting.",
+                        "page": 94
+                    },
+                    {
+                        "text": "Random Forests",
+                        "page": 94
+                    },
+                    {
+                        "text": "Rather than striving for the most efficient split at each round of recursive",
+                        "page": 94
+                    },
+                    {
+                        "text": "partitioning, an alternative technique is to construct multiple trees and",
+                        "page": 94
+                    },
+                    {
+                        "text": "combine their predictions to select an optimal path of classification or",
+                        "page": 95
+                    },
+                    {
+                        "text": "prediction. This involves a randomized selection of binary questions to grow",
+                        "page": 95
+                    },
+                    {
+                        "text": "multiple different decision trees, known as",
+                        "page": 95
+                    },
+                    {
+                        "text": "random forests",
+                        "page": 95
+                    },
+                    {
+                        "text": ". In the industry,",
+                        "page": 95
+                    },
+                    {
+                        "text": "you will also often hear people refer to this process as \u201cbootstrap",
+                        "page": 95
+                    },
+                    {
+                        "text": "aggregating\u201d or \u201cbagging.\u201d",
+                        "page": 95
+                    },
+                    {
+                        "text": "Figure 4: \u201cBagging\u201d is a creative abbreviation of \u201cBootstrap Aggregating\u201d",
+                        "page": 95
+                    },
+                    {
+                        "text": "The key to understanding random forests is to first understand bootstrap",
+                        "page": 95
+                    },
+                    {
+                        "text": "sampling. There\u2019s little use in compiling five or ten identical models\u2014there",
+                        "page": 95
+                    },
+                    {
+                        "text": "needs to be some element of variation. This is why bootstrap sampling draws",
+                        "page": 95
+                    },
+                    {
+                        "text": "on the same dataset but extracts a different variation of the data at each turn.",
+                        "page": 95
+                    },
+                    {
+                        "text": "Hence, in growing random forests, multiple varying copies of the training",
+                        "page": 95
+                    },
+                    {
+                        "text": "data are first run through each of the trees. For classification problems,",
+                        "page": 95
+                    },
+                    {
+                        "text": "bagging undergoes a process of voting to generate the",
+                        "page": 95
+                    },
+                    {
+                        "text": "final class",
+                        "page": 95
+                    },
+                    {
+                        "text": ". The results",
+                        "page": 95
+                    },
+                    {
+                        "text": "from each tree are compared and voted on to create an optimal tree to",
+                        "page": 95
+                    },
+                    {
+                        "text": "produce the final model, known as the final class. For regression problems,",
+                        "page": 95
+                    },
+                    {
+                        "text": "value averaging is used to generate a final prediction.",
+                        "page": 95
+                    },
+                    {
+                        "text": "Bootstrapping is also sometimes called weakly-supervised (you will recall we",
+                        "page": 95
+                    },
+                    {
+                        "text": "explored supervised and unsupervised learning in Chapter 3) because it trains",
+                        "page": 95
+                    },
+                    {
+                        "text": "classifiers using a random subset of features and fewer variables than those",
+                        "page": 95
+                    },
+                    {
+                        "text": "actually available.",
+                        "page": 95
+                    },
+                    {
+                        "text": "Boosting",
+                        "page": 95
+                    },
+                    {
+                        "text": "Another variant of multiple decision trees is the popular technique of",
+                        "page": 95
+                    },
+                    {
+                        "text": "boosting,",
+                        "page": 95
+                    },
+                    {
+                        "text": "which are a family of algorithms that convert \u201cweak learners\u201d to",
+                        "page": 95
+                    },
+                    {
+                        "text": "\u201cstrong learners.\u201d The underlying principle of boosting is to add weights to",
+                        "page": 95
+                    },
+                    {
+                        "text": "iterations that were misclassified in earlier rounds. This can be interpreted as",
+                        "page": 95
+                    },
+                    {
+                        "text": "similar to a language teacher offering after-school tutoring to the weakest",
+                        "page": 95
+                    },
+                    {
+                        "text": "students in the class in order to improve the average test results of the entire",
+                        "page": 95
+                    },
+                    {
+                        "text": "class.",
+                        "page": 95
+                    },
+                    {
+                        "text": "A popular boosting algorithm is gradient boosting. Rather than selecting",
+                        "page": 95
+                    },
+                    {
+                        "text": "combinations of binary questions at random (like random forests), gradient",
+                        "page": 95
+                    },
+                    {
+                        "text": "boosting selects binary questions that improve prediction accuracy for each",
+                        "page": 95
+                    },
+                    {
+                        "text": "new tree. Decision trees are therefore grown sequentially, as each tree is",
+                        "page": 95
+                    },
+                    {
+                        "text": "created using information derived from the previous decision tree.",
+                        "page": 95
+                    },
+                    {
+                        "text": "The way this works is that mistakes incurred with the training data are",
+                        "page": 96
+                    },
+                    {
+                        "text": "recorded and then applied to the next round of training data. At each iteration,",
+                        "page": 96
+                    },
+                    {
+                        "text": "weights are added to the training data based on the results of the previous",
+                        "page": 96
+                    },
+                    {
+                        "text": "iteration. Higher weighting is applied to instances that were incorrectly",
+                        "page": 96
+                    },
+                    {
+                        "text": "predicted from the training data, and instances that were correctly predicted",
+                        "page": 96
+                    },
+                    {
+                        "text": "receive less weighting. The training and test data are then compared and",
+                        "page": 96
+                    },
+                    {
+                        "text": "errors are again logged in order to inform weighting at each subsequent",
+                        "page": 96
+                    },
+                    {
+                        "text": "round. Earlier iterations that do not perform well, and that perhaps",
+                        "page": 96
+                    },
+                    {
+                        "text": "misclassified data, can thus be improved upon through further iterations. This",
+                        "page": 96
+                    },
+                    {
+                        "text": "process is repeated until there is a low level of error. The final result is then",
+                        "page": 96
+                    },
+                    {
+                        "text": "obtained from a weighted average of the total predictions derived from each",
+                        "page": 96
+                    },
+                    {
+                        "text": "model.",
+                        "page": 96
+                    },
+                    {
+                        "text": "While this approach mitigates the issue of overfitting, it does so with fewer",
+                        "page": 96
+                    },
+                    {
+                        "text": "trees than the bagging approach. In general, the more trees you add to a",
+                        "page": 96
+                    },
+                    {
+                        "text": "random forest, the greater its ability to thwart overfitting. Conversely, with",
+                        "page": 96
+                    },
+                    {
+                        "text": "gradient boosting, too many trees may cause overfitting and caution should",
+                        "page": 96
+                    },
+                    {
+                        "text": "be taken as new trees are added.",
+                        "page": 96
+                    },
+                    {
+                        "text": "One drawback of using random forests and gradient boosting is that we return",
+                        "page": 96
+                    },
+                    {
+                        "text": "to a black-box technique and sacrifice the visual simplicity and ease of",
+                        "page": 96
+                    },
+                    {
+                        "text": "interpretation that comes with a single decision tree.",
+                        "page": 96
+                    },
+                    {
+                        "text": "12",
+                        "page": 97
+                    },
+                    {
+                        "text": "ENSEMBLE MODELING",
+                        "page": 98
+                    },
+                    {
+                        "text": "One of the most effective machine learning methodologies is",
+                        "page": 98
+                    },
+                    {
+                        "text": "ensemble",
+                        "page": 98
+                    },
+                    {
+                        "text": "modeling",
+                        "page": 98
+                    },
+                    {
+                        "text": ", also known as",
+                        "page": 98
+                    },
+                    {
+                        "text": "ensembles",
+                        "page": 98
+                    },
+                    {
+                        "text": ". Ensemble modeling combines statistical",
+                        "page": 98
+                    },
+                    {
+                        "text": "techniques to create a model that produces a unified prediction. It is through",
+                        "page": 98
+                    },
+                    {
+                        "text": "combining estimates and following the wisdom of the crowd that ensemble",
+                        "page": 98
+                    },
+                    {
+                        "text": "modeling performs a final classification or outcome with better predictive",
+                        "page": 98
+                    },
+                    {
+                        "text": "performance. Naturally, ensemble models are a popular choice when it comes",
+                        "page": 98
+                    },
+                    {
+                        "text": "to machine learning competitions like the Netflix Competition and Kaggle",
+                        "page": 98
+                    },
+                    {
+                        "text": "competitions.",
+                        "page": 98
+                    },
+                    {
+                        "text": "Ensemble models can be classified into various categories including",
+                        "page": 98
+                    },
+                    {
+                        "text": "sequential, parallel, homogenous, and heterogeneous. Let\u2019s start by first",
+                        "page": 98
+                    },
+                    {
+                        "text": "looking at sequential and parallel models. For sequential ensemble models,",
+                        "page": 98
+                    },
+                    {
+                        "text": "prediction error is reduced by adding weights to classifiers that previously",
+                        "page": 98
+                    },
+                    {
+                        "text": "misclassified data. Gradient boosting and AdaBoost are two examples of",
+                        "page": 98
+                    },
+                    {
+                        "text": "sequential models. Conversely, parallel ensemble models work concurrently",
+                        "page": 98
+                    },
+                    {
+                        "text": "and reduce error by averaging. Decision trees are an example of this",
+                        "page": 98
+                    },
+                    {
+                        "text": "technique.",
+                        "page": 98
+                    },
+                    {
+                        "text": "Ensemble models can also be generated using a single technique with",
+                        "page": 98
+                    },
+                    {
+                        "text": "numerous variations (known as a homogeneous ensemble) or through",
+                        "page": 98
+                    },
+                    {
+                        "text": "different techniques (known as a heterogeneous ensemble). An example of a",
+                        "page": 98
+                    },
+                    {
+                        "text": "homogeneous ensemble model would be numerous decision trees working",
+                        "page": 98
+                    },
+                    {
+                        "text": "together to form a single prediction (bagging). Meanwhile, an example of a",
+                        "page": 98
+                    },
+                    {
+                        "text": "heterogeneous ensemble would be the usage of",
+                        "page": 98
+                    },
+                    {
+                        "text": "k",
+                        "page": 98
+                    },
+                    {
+                        "text": "-means clustering or a neural",
+                        "page": 98
+                    },
+                    {
+                        "text": "network in collaboration with a decision tree model.",
+                        "page": 98
+                    },
+                    {
+                        "text": "Naturally, it is important to select techniques that complement each other.",
+                        "page": 98
+                    },
+                    {
+                        "text": "Neural networks, for instance, require complete data for analysis, whereas",
+                        "page": 98
+                    },
+                    {
+                        "text": "decision trees can effectively handle missing values. Together, these two",
+                        "page": 98
+                    },
+                    {
+                        "text": "techniques provide added value over a homogeneous model. The neural",
+                        "page": 98
+                    },
+                    {
+                        "text": "network accurately predicts the majority of instances that provide a value and",
+                        "page": 98
+                    },
+                    {
+                        "text": "the decision tree ensures that there are no \u201cnull\u201d results that would otherwise",
+                        "page": 98
+                    },
+                    {
+                        "text": "be incurred from missing values in a neural network. The other advantage of",
+                        "page": 98
+                    },
+                    {
+                        "text": "ensemble modeling is that aggregated estimates are generally more accurate",
+                        "page": 98
+                    },
+                    {
+                        "text": "than any single estimate.",
+                        "page": 99
+                    },
+                    {
+                        "text": "There are various subcategories of ensemble modeling; we have already",
+                        "page": 99
+                    },
+                    {
+                        "text": "touched on two of these in the previous chapter. Four popular subcategories",
+                        "page": 99
+                    },
+                    {
+                        "text": "of ensemble modeling are bagging, boosting, a bucket of models, and",
+                        "page": 99
+                    },
+                    {
+                        "text": "stacking.",
+                        "page": 99
+                    },
+                    {
+                        "text": "Bagging",
+                        "page": 99
+                    },
+                    {
+                        "text": ", as we know, is short for \u201cboosted aggregating\u201d and is an example",
+                        "page": 99
+                    },
+                    {
+                        "text": "of a homogenous ensemble. This method draws upon randomly drawn",
+                        "page": 99
+                    },
+                    {
+                        "text": "datasets and combines predictions to design a unified model based on a",
+                        "page": 99
+                    },
+                    {
+                        "text": "voting process among the training data. Expressed in another way, bagging is",
+                        "page": 99
+                    },
+                    {
+                        "text": "a special process of model averaging. Random forest, as we know, is a",
+                        "page": 99
+                    },
+                    {
+                        "text": "popular example of bagging.",
+                        "page": 99
+                    },
+                    {
+                        "text": "Boosting",
+                        "page": 99
+                    },
+                    {
+                        "text": "is a popular alternative technique that addresses error and data",
+                        "page": 99
+                    },
+                    {
+                        "text": "misclassified by the previous iteration to form a final model. Gradient",
+                        "page": 99
+                    },
+                    {
+                        "text": "boosting and AdaBoost are both popular examples of boosting.",
+                        "page": 99
+                    },
+                    {
+                        "text": "A",
+                        "page": 99
+                    },
+                    {
+                        "text": "bucket of models",
+                        "page": 99
+                    },
+                    {
+                        "text": "trains numerous different algorithmic models using the",
+                        "page": 99
+                    },
+                    {
+                        "text": "same training data and then picks the one that performed most accurately on",
+                        "page": 99
+                    },
+                    {
+                        "text": "the test data.",
+                        "page": 99
+                    },
+                    {
+                        "text": "Stacking",
+                        "page": 99
+                    },
+                    {
+                        "text": "runs multiple models simultaneously on the data and combines",
+                        "page": 99
+                    },
+                    {
+                        "text": "those results to produce a final model. This technique is currently very",
+                        "page": 99
+                    },
+                    {
+                        "text": "popular in machine learning competitions, including the Netflix Prize. (Held",
+                        "page": 99
+                    },
+                    {
+                        "text": "between 2006 and 2009, Netflix offered a prize for a machine learning model",
+                        "page": 99
+                    },
+                    {
+                        "text": "that could improve their recommender system in order to produce more",
+                        "page": 99
+                    },
+                    {
+                        "text": "effective movie recommendations. One of the winning techniques adopted a",
+                        "page": 99
+                    },
+                    {
+                        "text": "form of linear stacking that combined predictions from multiple predictive",
+                        "page": 99
+                    },
+                    {
+                        "text": "models.)",
+                        "page": 99
+                    },
+                    {
+                        "text": "Although ensemble models typically produce more accurate predictions, one",
+                        "page": 99
+                    },
+                    {
+                        "text": "drawback to this methodology is, in fact, the level of sophistication.",
+                        "page": 99
+                    },
+                    {
+                        "text": "Ensembles face the same trade-off between accuracy and simplicity as a",
+                        "page": 99
+                    },
+                    {
+                        "text": "single decision tree versus a random forest. The transparency and simplicity",
+                        "page": 99
+                    },
+                    {
+                        "text": "of a simple technique, such as a decision tree or",
+                        "page": 99
+                    },
+                    {
+                        "text": "k",
+                        "page": 99
+                    },
+                    {
+                        "text": "-nearest neighbors, is lost",
+                        "page": 99
+                    },
+                    {
+                        "text": "and instantly mutated into a statistical black-box. Performance of the model",
+                        "page": 99
+                    },
+                    {
+                        "text": "will win out in most cases, but the transparency of your model is another",
+                        "page": 99
+                    },
+                    {
+                        "text": "factor to consider when determining your preferred methodology.",
+                        "page": 99
+                    },
+                    {
+                        "text": "13",
+                        "page": 100
+                    },
+                    {
+                        "text": "BUILDING A MODEL IN PYTHON",
+                        "page": 101
+                    },
+                    {
+                        "text": "After examining the statistical underpinnings of numerous algorithms, it\u2019s",
+                        "page": 101
+                    },
+                    {
+                        "text": "time to turn our attention to building an actual machine learning model.",
+                        "page": 101
+                    },
+                    {
+                        "text": "Although there are various options in regards to programming languages (as",
+                        "page": 101
+                    },
+                    {
+                        "text": "outlined in Chapter 4), for this exercise we will use Python because it is quick",
+                        "page": 101
+                    },
+                    {
+                        "text": "to learn and it\u2019s an effective programming language for anyone interested in",
+                        "page": 101
+                    },
+                    {
+                        "text": "manipulating and working with large datasets.",
+                        "page": 101
+                    },
+                    {
+                        "text": "If you don't have any experience in programming or programming with",
+                        "page": 101
+                    },
+                    {
+                        "text": "Python, there\u2019s no need to worry. The key purpose of this chapter is to",
+                        "page": 101
+                    },
+                    {
+                        "text": "understand the methodology and steps behind building a basic machine",
+                        "page": 101
+                    },
+                    {
+                        "text": "learning model.",
+                        "page": 101
+                    },
+                    {
+                        "text": "In this exercise, we will design a house price valuation system using gradient",
+                        "page": 101
+                    },
+                    {
+                        "text": "boosting by following these six steps:",
+                        "page": 101
+                    },
+                    {
+                        "text": "1)",
+                        "page": 101
+                    },
+                    {
+                        "text": "Set up the development environment",
+                        "page": 101
+                    },
+                    {
+                        "text": "2)",
+                        "page": 101
+                    },
+                    {
+                        "text": "Import the dataset",
+                        "page": 101
+                    },
+                    {
+                        "text": "3)",
+                        "page": 101
+                    },
+                    {
+                        "text": "Scrub the dataset",
+                        "page": 101
+                    },
+                    {
+                        "text": "4)",
+                        "page": 101
+                    },
+                    {
+                        "text": "Split the data into training and test data",
+                        "page": 101
+                    },
+                    {
+                        "text": "5)",
+                        "page": 101
+                    },
+                    {
+                        "text": "Select an algorithm and configure its hyperparameters",
+                        "page": 101
+                    },
+                    {
+                        "text": "6)",
+                        "page": 101
+                    },
+                    {
+                        "text": "Evaluate the results",
+                        "page": 101
+                    },
+                    {
+                        "text": "1) Set up the development environment",
+                        "page": 101
+                    },
+                    {
+                        "text": "The first step is to prepare our development environment. For this exercise,",
+                        "page": 101
+                    },
+                    {
+                        "text": "we will be working in Jupyter Notebook, which is an open-source web",
+                        "page": 101
+                    },
+                    {
+                        "text": "application that allows editing and sharing of notebooks.",
+                        "page": 101
+                    },
+                    {
+                        "text": "You can download Jupyter Notebook from: http://jupyter.org/install.html",
+                        "page": 101
+                    },
+                    {
+                        "text": "Jupyter Notebook can be installed using the Anaconda Distribution or",
+                        "page": 101
+                    },
+                    {
+                        "text": "Python\u2019s package manager, pip. There are instructions available on the",
+                        "page": 101
+                    },
+                    {
+                        "text": "Jupyter Notebook website that outline both options. As an experienced",
+                        "page": 101
+                    },
+                    {
+                        "text": "Python user, you may wish to install Jupyter Notebook via pip. For",
+                        "page": 101
+                    },
+                    {
+                        "text": "beginners, I recommend selecting the Anaconda Distribution option, which",
+                        "page": 101
+                    },
+                    {
+                        "text": "offers an easy click-and-drag setup.",
+                        "page": 101
+                    },
+                    {
+                        "text": "This particular installation option will direct you to the Anaconda website.",
+                        "page": 102
+                    },
+                    {
+                        "text": "From there, you can select your preferred installation for Windows, macOS,",
+                        "page": 102
+                    },
+                    {
+                        "text": "or Linux. Again, you can find instructions available on the Anaconda website",
+                        "page": 102
+                    },
+                    {
+                        "text": "according to your choice of operating system.",
+                        "page": 102
+                    },
+                    {
+                        "text": "After installing Anaconda to your machine, you will have access to a number",
+                        "page": 102
+                    },
+                    {
+                        "text": "of data science applications including rstudio, Jupyter Notebook, and",
+                        "page": 102
+                    },
+                    {
+                        "text": "graphviz for data visualization. For this exercise, you will need to select",
+                        "page": 102
+                    },
+                    {
+                        "text": "Jupyter Notebook by clicking on \u201cLaunch\u201d inside the Jupyter Notebook tab.",
+                        "page": 102
+                    },
+                    {
+                        "text": "Figure 1: The Anaconda Navigator portal",
+                        "page": 102
+                    },
+                    {
+                        "text": "To initiate Jupyter Notebook, run the following command from the Terminal",
+                        "page": 102
+                    },
+                    {
+                        "text": "(for Mac/Linux) or Command Prompt (for Windows):",
+                        "page": 102
+                    },
+                    {
+                        "text": "jupyter notebook",
+                        "page": 102
+                    },
+                    {
+                        "text": "Terminal/Command Prompt will then generate a URL for you to copy and",
+                        "page": 102
+                    },
+                    {
+                        "text": "paste into your web browser. Example: http://localhost:8888/",
+                        "page": 102
+                    },
+                    {
+                        "text": "Copy and paste the generated URL into your web browser to load Jupyter",
+                        "page": 102
+                    },
+                    {
+                        "text": "Notebook. Once you have Jupyter Notebook open in your browser, click on",
+                        "page": 102
+                    },
+                    {
+                        "text": "\u201cNew\u201d in the top right-hand corner of the web application to create a new",
+                        "page": 103
+                    },
+                    {
+                        "text": "\u201cNotepad\u201d project, and then select \u201cPython 3.\u201d",
+                        "page": 103
+                    },
+                    {
+                        "text": "The final step is to install the necessary libraries required to complete this",
+                        "page": 103
+                    },
+                    {
+                        "text": "exercise. You will need to install Pandas and a number of libraries from",
+                        "page": 103
+                    },
+                    {
+                        "text": "Scikit-learn into the notepad.",
+                        "page": 103
+                    },
+                    {
+                        "text": "In machine learning, each project will vary in regards to the libraries required",
+                        "page": 103
+                    },
+                    {
+                        "text": "for import. For this particular exercise, we are using gradient boosting",
+                        "page": 103
+                    },
+                    {
+                        "text": "(ensemble modeling) and mean absolute error to measure performance.",
+                        "page": 103
+                    },
+                    {
+                        "text": "You will need to import each of the following libraries and functions by",
+                        "page": 103
+                    },
+                    {
+                        "text": "entering these exact commands in Jupyter Notebook:",
+                        "page": 103
+                    },
+                    {
+                        "text": "import pandas as pd",
+                        "page": 103
+                    },
+                    {
+                        "text": "from sklearn.model_selection import train_test_split",
+                        "page": 103
+                    },
+                    {
+                        "text": "from sklearn import ensemble",
+                        "page": 103
+                    },
+                    {
+                        "text": "from sklearn.metrics import mean_absolute_error",
+                        "page": 103
+                    },
+                    {
+                        "text": "from sklearn.externals import joblib",
+                        "page": 103
+                    },
+                    {
+                        "text": "Don\u2019t worry if you don\u2019t recognize each of the imported libraries in the code",
+                        "page": 103
+                    },
+                    {
+                        "text": "snippet above. These libraries will be referred to in later steps.",
+                        "page": 103
+                    },
+                    {
+                        "text": "2) Import the dataset",
+                        "page": 103
+                    },
+                    {
+                        "text": "The next step is to import the dataset. For this exercise, I have selected a free",
+                        "page": 103
+                    },
+                    {
+                        "text": "and publicly available dataset from kaggle.com which contains house, unit,",
+                        "page": 103
+                    },
+                    {
+                        "text": "and townhouse prices in Melbourne, Australia. This dataset comprises data",
+                        "page": 103
+                    },
+                    {
+                        "text": "scraped from publicly available listings posted weekly on",
+                        "page": 103
+                    },
+                    {
+                        "text": "www.domain.com.au. The dataset contains 14,242 property listings and 21",
+                        "page": 103
+                    },
+                    {
+                        "text": "variables including address, suburb, land size, number of rooms, price,",
+                        "page": 103
+                    },
+                    {
+                        "text": "longitude, latitude, postcode, etc.",
+                        "page": 103
+                    },
+                    {
+                        "text": "Please note that the property values in this dataset are expressed in Australian",
+                        "page": 103
+                    },
+                    {
+                        "text": "Dollars\u2014$1 AUD is approximately $0.77 USD (as of 2017).",
+                        "page": 103
+                    },
+                    {
+                        "text": "Download the Melbourne Housing Market dataset from this link:",
+                        "page": 103
+                    },
+                    {
+                        "text": "https://www.kaggle.com/anthonypino/melbourne-housing-market",
+                        "page": 103
+                    },
+                    {
+                        "text": "After registering a free account and logging into kaggle.com, download the",
+                        "page": 103
+                    },
+                    {
+                        "text": "dataset as a zip file. Next, unzip the downloaded file and import into Jupyter",
+                        "page": 103
+                    },
+                    {
+                        "text": "Notebook. To import the dataset, you can utilize the read_csv function to",
+                        "page": 103
+                    },
+                    {
+                        "text": "load the data into a Pandas dataframe.",
+                        "page": 103
+                    },
+                    {
+                        "text": "df = pd.read_csv('~/Downloads/Melbourne_housing_FULL-26-09-2017.csv')",
+                        "page": 103
+                    },
+                    {
+                        "text": "This command will directly import the dataset. However, please note that the",
+                        "page": 104
+                    },
+                    {
+                        "text": "exact file path will depend on the saved location of your dataset. For",
+                        "page": 104
+                    },
+                    {
+                        "text": "example, if you saved the CSV file to your desktop, you would need to read",
+                        "page": 104
+                    },
+                    {
+                        "text": "in the .csv file using the following command:",
+                        "page": 104
+                    },
+                    {
+                        "text": "df = pd.read_csv('~/Desktop/Melbourne_housing_FULL-26-09-2017.csv')",
+                        "page": 104
+                    },
+                    {
+                        "text": "In my case, I imported the dataset from my Downloads folder. As you move",
+                        "page": 104
+                    },
+                    {
+                        "text": "forward in machine learning and data science, it\u2019s important that you save",
+                        "page": 104
+                    },
+                    {
+                        "text": "datasets and projects in standalone and named folders for organized access. If",
+                        "page": 104
+                    },
+                    {
+                        "text": "you opt to save the .csv into the same folder as your Jupyter Notebook, you",
+                        "page": 104
+                    },
+                    {
+                        "text": "won\u2019t need to append a directory name or \u201c~/.\u201d",
+                        "page": 104
+                    },
+                    {
+                        "text": "Next, to preview the dataframe within Jupyter Notebook, enter the following",
+                        "page": 104
+                    },
+                    {
+                        "text": "command, with \u201cn\u201d representing the number of rows you wish to preview in",
+                        "page": 104
+                    },
+                    {
+                        "text": "relation to the head row.",
+                        "page": 104
+                    },
+                    {
+                        "text": "df.head(n=5)",
+                        "page": 104
+                    },
+                    {
+                        "text": "Right-click and select \u201cRun\u201d or navigate from the Jupyter Notebook menu:",
+                        "page": 104
+                    },
+                    {
+                        "text": "Cell > Run All",
+                        "page": 104
+                    },
+                    {
+                        "text": "Figure 2: Previewing a dataframe in Jupyter Notebook",
+                        "page": 104
+                    },
+                    {
+                        "text": "This will populate the dataset within Jupyter Notebook as shown in Figure 2.",
+                        "page": 104
+                    },
+                    {
+                        "text": "This step is not mandatory, but it is a useful technique for reviewing your",
+                        "page": 104
+                    },
+                    {
+                        "text": "dataset inside Jupyter Notebook.",
+                        "page": 104
+                    },
+                    {
+                        "text": "3) Scrub the dataset",
+                        "page": 104
+                    },
+                    {
+                        "text": "The next stage is to scrub the dataset. Remember, scrubbing is the process of",
+                        "page": 105
+                    },
+                    {
+                        "text": "refining your dataset. This involves modifying or removing incomplete,",
+                        "page": 105
+                    },
+                    {
+                        "text": "irrelevant or duplicated data. It may also entail converting text-based data to",
+                        "page": 105
+                    },
+                    {
+                        "text": "numerical values and the redesigning of features.",
+                        "page": 105
+                    },
+                    {
+                        "text": "It is important to note that the scrubbing process can take place before or after",
+                        "page": 105
+                    },
+                    {
+                        "text": "importing the dataset into Jupyter Notebook. For example, the creator of the",
+                        "page": 105
+                    },
+                    {
+                        "text": "Melbourne Housing Market dataset has misspelled \u201cLongitude\u201d and",
+                        "page": 105
+                    },
+                    {
+                        "text": "\u201cLatitude\u201d in the head columns. As we will not be examining these two",
+                        "page": 105
+                    },
+                    {
+                        "text": "variables in our exercise, there is no need to make any changes. If, though,",
+                        "page": 105
+                    },
+                    {
+                        "text": "we did wish to include these two variables in our model, it would be prudent",
+                        "page": 105
+                    },
+                    {
+                        "text": "to first fix this error.",
+                        "page": 105
+                    },
+                    {
+                        "text": "From a programming perspective, spelling mistakes in the column titles do",
+                        "page": 105
+                    },
+                    {
+                        "text": "not pose any problems as long as we apply the same keyword spelling to",
+                        "page": 105
+                    },
+                    {
+                        "text": "perform our commands. However, this misnaming of columns could lead to",
+                        "page": 105
+                    },
+                    {
+                        "text": "human errors, especially if you are sharing your code with team members. To",
+                        "page": 105
+                    },
+                    {
+                        "text": "avoid any potential confusion, it\u2019s best to fix spelling mistakes and other",
+                        "page": 105
+                    },
+                    {
+                        "text": "simple errors in the source file before importing the dataset into Jupyter",
+                        "page": 105
+                    },
+                    {
+                        "text": "Notebook or another development environment. You can do this by opening",
+                        "page": 105
+                    },
+                    {
+                        "text": "the CSV file in Microsoft Excel (or equivalent program), editing the dataset,",
+                        "page": 105
+                    },
+                    {
+                        "text": "and then resaving it again as a CSV file.",
+                        "page": 105
+                    },
+                    {
+                        "text": "While simple errors can be corrected within the source file, major structural",
+                        "page": 105
+                    },
+                    {
+                        "text": "changes to the dataset such as feature engineering are best performed in the",
+                        "page": 105
+                    },
+                    {
+                        "text": "development environment for added flexibility and to preserve the dataset for",
+                        "page": 105
+                    },
+                    {
+                        "text": "later use. For instance, in this exercise, we will be implementing feature",
+                        "page": 105
+                    },
+                    {
+                        "text": "engineering to remove a number of columns from the dataset, but we may",
+                        "page": 105
+                    },
+                    {
+                        "text": "later change our mind about which columns we wish to include.",
+                        "page": 105
+                    },
+                    {
+                        "text": "Manipulating the composition of the dataset in the development environment",
+                        "page": 105
+                    },
+                    {
+                        "text": "is less permanent and generally much simpler and quicker than doing so",
+                        "page": 105
+                    },
+                    {
+                        "text": "directly in the source file.",
+                        "page": 105
+                    },
+                    {
+                        "text": "Scrubbing Process",
+                        "page": 105
+                    },
+                    {
+                        "text": "Let\u2019s first remove columns from the dataset that we don\u2019t wish to include in",
+                        "page": 105
+                    },
+                    {
+                        "text": "the model by using the del df[' '] function and entering the vector (column)",
+                        "page": 105
+                    },
+                    {
+                        "text": "titles that we wish to remove.",
+                        "page": 105
+                    },
+                    {
+                        "text": "# The misspellings of \u201clongitude\u201d and \u201clatitude\u201d are used, as the two misspellings were not corrected in",
+                        "page": 105
+                    },
+                    {
+                        "text": "the source file.",
+                        "page": 105
+                    },
+                    {
+                        "text": "del df['Address']",
+                        "page": 106
+                    },
+                    {
+                        "text": "del df['Method']",
+                        "page": 106
+                    },
+                    {
+                        "text": "del df['SellerG']",
+                        "page": 106
+                    },
+                    {
+                        "text": "del df['Date']",
+                        "page": 106
+                    },
+                    {
+                        "text": "del df['Postcode']",
+                        "page": 106
+                    },
+                    {
+                        "text": "del df['Lattitude']",
+                        "page": 106
+                    },
+                    {
+                        "text": "del df['Longtitude']",
+                        "page": 106
+                    },
+                    {
+                        "text": "del df['Regionname']",
+                        "page": 106
+                    },
+                    {
+                        "text": "del df['Propertycount']",
+                        "page": 106
+                    },
+                    {
+                        "text": "The Address, Regionname, and Propertycount columns were removed as",
+                        "page": 106
+                    },
+                    {
+                        "text": "property location is covered in other columns (Suburb and CouncilArea) and",
+                        "page": 106
+                    },
+                    {
+                        "text": "because we want to minimize non-numerical information (e.g. Address and",
+                        "page": 106
+                    },
+                    {
+                        "text": "Regionname). Postcode, Latitude, and Longitude were also removed because,",
+                        "page": 106
+                    },
+                    {
+                        "text": "again, property location is contained in the Suburb and CouncilArea columns.",
+                        "page": 106
+                    },
+                    {
+                        "text": "My assumption is that Suburb and CouncilArea tend to have more sway in",
+                        "page": 106
+                    },
+                    {
+                        "text": "buyers\u2019 minds than Postcode, Latitude, and Longitude\u2014although Address",
+                        "page": 106
+                    },
+                    {
+                        "text": "deserves an honorable mention.",
+                        "page": 106
+                    },
+                    {
+                        "text": "Method, SellerG, and Date were also removed because they were deemed to",
+                        "page": 106
+                    },
+                    {
+                        "text": "have less relevance in comparison to other variables. This is not to say that",
+                        "page": 106
+                    },
+                    {
+                        "text": "these variables don\u2019t impact property prices, rather the other eleven",
+                        "page": 106
+                    },
+                    {
+                        "text": "independent variables are sufficient for building a basic model. We can",
+                        "page": 106
+                    },
+                    {
+                        "text": "decide to add any of these variables into the model later, and you may choose",
+                        "page": 106
+                    },
+                    {
+                        "text": "to include them in your own model.",
+                        "page": 106
+                    },
+                    {
+                        "text": "The remaining eleven independent variables (represented as X) in the dataset",
+                        "page": 106
+                    },
+                    {
+                        "text": "are Suburb, Rooms, Type, Distance, Bedroom2, Bathroom, Car, Landsize,",
+                        "page": 106
+                    },
+                    {
+                        "text": "BuildingArea, YearBuilt, and CouncilArea. The twelfth variable, located in",
+                        "page": 106
+                    },
+                    {
+                        "text": "the fifth column of the downloaded dataset, is the dependent variable, which",
+                        "page": 106
+                    },
+                    {
+                        "text": "is Price (represented as y). As mentioned, decision trees (including gradient",
+                        "page": 106
+                    },
+                    {
+                        "text": "boosting and random forests) are adept at managing large and high-",
+                        "page": 106
+                    },
+                    {
+                        "text": "dimensional datasets with a high number of variables.",
+                        "page": 106
+                    },
+                    {
+                        "text": "The next step for scrubbing the dataset is to remove any missing values.",
+                        "page": 106
+                    },
+                    {
+                        "text": "Although there are numerous methods to manage missing values (e.g.",
+                        "page": 106
+                    },
+                    {
+                        "text": "calculating the mean, the median, or deleting missing values altogether), for",
+                        "page": 106
+                    },
+                    {
+                        "text": "this exercise, we want to keep it as simple as possible and we\u2019ll therefore not",
+                        "page": 106
+                    },
+                    {
+                        "text": "be examining rows with missing values. The obvious downside is that we",
+                        "page": 106
+                    },
+                    {
+                        "text": "have less data to analyze. As a beginner, it makes sense to master complete",
+                        "page": 106
+                    },
+                    {
+                        "text": "datasets before adding an extra dimension of difficulty in attempting to deal",
+                        "page": 106
+                    },
+                    {
+                        "text": "with missing values. Unfortunately, in the case of our sample dataset, we",
+                        "page": 106
+                    },
+                    {
+                        "text": "do",
+                        "page": 106
+                    },
+                    {
+                        "text": "have a lot of missing values! Nonetheless, we still have ample rows available",
+                        "page": 107
+                    },
+                    {
+                        "text": "to proceed with building our model.",
+                        "page": 107
+                    },
+                    {
+                        "text": "The following Pandas function can be used to remove rows with missing",
+                        "page": 107
+                    },
+                    {
+                        "text": "values:",
+                        "page": 107
+                    },
+                    {
+                        "text": "df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=True)",
+                        "page": 107
+                    },
+                    {
+                        "text": "Keep in mind that it\u2019s important to drop rows with missing values after",
+                        "page": 107
+                    },
+                    {
+                        "text": "applying the del df function to remove columns (as shown in the previous",
+                        "page": 107
+                    },
+                    {
+                        "text": "step). This way, there\u2019s a better chance that more rows from the original",
+                        "page": 107
+                    },
+                    {
+                        "text": "dataset will be preserved. Imagine dropping a whole row because it was",
+                        "page": 107
+                    },
+                    {
+                        "text": "missing the value for a variable that would be later deleted like the post code",
+                        "page": 107
+                    },
+                    {
+                        "text": "in our model!",
+                        "page": 107
+                    },
+                    {
+                        "text": "Next, let\u2019s convert columns that contain non-numerical data to numerical",
+                        "page": 107
+                    },
+                    {
+                        "text": "values using one-hot encoding. With Pandas, one-hot encoding can be",
+                        "page": 107
+                    },
+                    {
+                        "text": "performed using the get_dummies function:",
+                        "page": 107
+                    },
+                    {
+                        "text": "features_df = pd.get_dummies(df, columns=['Suburb', 'CouncilArea', 'Type'])",
+                        "page": 107
+                    },
+                    {
+                        "text": "This command converts column values for Suburb, CouncilArea, and Type",
+                        "page": 107
+                    },
+                    {
+                        "text": "into numerical values through the application of one-hot encoding.",
+                        "page": 107
+                    },
+                    {
+                        "text": "Next, we need to remove the \u201cPrice\u201d column because this column will act as",
+                        "page": 107
+                    },
+                    {
+                        "text": "our dependent variable (y) and for now we are only examining the eleven",
+                        "page": 107
+                    },
+                    {
+                        "text": "independent variables (X).",
+                        "page": 107
+                    },
+                    {
+                        "text": "del features_df['Price']",
+                        "page": 107
+                    },
+                    {
+                        "text": "Finally, create X and y arrays from the dataset using the matrix data type",
+                        "page": 107
+                    },
+                    {
+                        "text": "(as_matrix). The X array contains the independent variables and the y array",
+                        "page": 107
+                    },
+                    {
+                        "text": "contains the dependent variable of Price.",
+                        "page": 107
+                    },
+                    {
+                        "text": "X = features_df.as_matrix()",
+                        "page": 107
+                    },
+                    {
+                        "text": "y = df['Price'].as_matrix()",
+                        "page": 107
+                    },
+                    {
+                        "text": "4) Split the dataset",
+                        "page": 107
+                    },
+                    {
+                        "text": "We are now at the stage of splitting the data into training and test segments.",
+                        "page": 107
+                    },
+                    {
+                        "text": "For this exercise, we will proceed with a standard 70/30 split by calling the",
+                        "page": 107
+                    },
+                    {
+                        "text": "Scikit-learn function below with an argument of \u201c0.3.\u201d The dataset\u2019s rows are",
+                        "page": 108
+                    },
+                    {
+                        "text": "also shuffled randomly to avoid bias using the random_state function.",
+                        "page": 108
+                    },
+                    {
+                        "text": "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)",
+                        "page": 108
+                    },
+                    {
+                        "text": "5) Select the algorithm and configure its hyperparameters",
+                        "page": 109
+                    },
+                    {
+                        "text": "As you will recall, we are using the gradient boosting algorithm for this",
+                        "page": 109
+                    },
+                    {
+                        "text": "exercise, as shown.",
+                        "page": 109
+                    },
+                    {
+                        "text": "model = ensemble.GradientBoostingRegressor(",
+                        "page": 109
+                    },
+                    {
+                        "text": "n_estimators=150,",
+                        "page": 109
+                    },
+                    {
+                        "text": "learning_rate=0.1,",
+                        "page": 109
+                    },
+                    {
+                        "text": "max_depth=30,",
+                        "page": 109
+                    },
+                    {
+                        "text": "min_samples_split=4,",
+                        "page": 109
+                    },
+                    {
+                        "text": "min_samples_leaf=6,",
+                        "page": 109
+                    },
+                    {
+                        "text": "max_features=0.6,",
+                        "page": 109
+                    },
+                    {
+                        "text": "loss='huber'",
+                        "page": 109
+                    },
+                    {
+                        "text": ")",
+                        "page": 109
+                    },
+                    {
+                        "text": "The first line is the algorithm itself (gradient boosting) and comprises just",
+                        "page": 109
+                    },
+                    {
+                        "text": "one line of code. The lines below dictate the hyperparameters for this",
+                        "page": 109
+                    },
+                    {
+                        "text": "algorithm.",
+                        "page": 109
+                    },
+                    {
+                        "text": "n_estimators",
+                        "page": 109
+                    },
+                    {
+                        "text": "represents how many decision trees to build. Remember that a",
+                        "page": 109
+                    },
+                    {
+                        "text": "high number of trees will generally improve accuracy (up to a certain point),",
+                        "page": 109
+                    },
+                    {
+                        "text": "but it will also increase the model\u2019s processing time. Above, I have selected",
+                        "page": 109
+                    },
+                    {
+                        "text": "150 decision trees as an initial starting point.",
+                        "page": 109
+                    },
+                    {
+                        "text": "learning_rate",
+                        "page": 109
+                    },
+                    {
+                        "text": "controls the rate at which additional decision trees influence",
+                        "page": 109
+                    },
+                    {
+                        "text": "the overall prediction. This effectively shrinks the contribution of each tree",
+                        "page": 109
+                    },
+                    {
+                        "text": "by the set learning_rate. Inserting a low rate here, such as 0.1, should",
+                        "page": 109
+                    },
+                    {
+                        "text": "improve accuracy.",
+                        "page": 109
+                    },
+                    {
+                        "text": "max_depth",
+                        "page": 109
+                    },
+                    {
+                        "text": "defines the maximum number of layers (depth) for each decision",
+                        "page": 109
+                    },
+                    {
+                        "text": "tree. If \u201cNone\u201d is selected, then nodes expand until all leaves are pure or until",
+                        "page": 109
+                    },
+                    {
+                        "text": "all leaves contain less than min_samples_leaf. Here, I have selected a high",
+                        "page": 109
+                    },
+                    {
+                        "text": "maximum number of layers (30), which will have a dramatic effect on the",
+                        "page": 109
+                    },
+                    {
+                        "text": "final result, as we will see later.",
+                        "page": 109
+                    },
+                    {
+                        "text": "min_samples_split",
+                        "page": 109
+                    },
+                    {
+                        "text": "defines the minimum number of samples required to",
+                        "page": 109
+                    },
+                    {
+                        "text": "execute a new binary split. For example, min_samples_split = 10 means there",
+                        "page": 109
+                    },
+                    {
+                        "text": "must be ten available samples in order to create a new branch.",
+                        "page": 109
+                    },
+                    {
+                        "text": "min_samples_leaf",
+                        "page": 109
+                    },
+                    {
+                        "text": "represents the minimum number of samples that must",
+                        "page": 109
+                    },
+                    {
+                        "text": "appear in each child node (leaf) before a new branch can be implemented.",
+                        "page": 109
+                    },
+                    {
+                        "text": "This helps to mitigate the impact of outliers and anomalies in the form of a",
+                        "page": 109
+                    },
+                    {
+                        "text": "low number of samples found in one leaf as a result of a binary split. For",
+                        "page": 109
+                    },
+                    {
+                        "text": "example, min_samples_leaf =",
+                        "page": 109
+                    },
+                    {
+                        "text": "4 requires there to be at least four available",
+                        "page": 109
+                    },
+                    {
+                        "text": "samples within each leaf for a new branch to be created.",
+                        "page": 110
+                    },
+                    {
+                        "text": "max_features",
+                        "page": 110
+                    },
+                    {
+                        "text": "is the total number of features presented to the model when",
+                        "page": 110
+                    },
+                    {
+                        "text": "determining the best split. As mentioned in Chapter 11, random forests and",
+                        "page": 110
+                    },
+                    {
+                        "text": "gradient boosting restrict the total number of features shown to each",
+                        "page": 110
+                    },
+                    {
+                        "text": "individual tree to create multiple results that can be voted upon later.",
+                        "page": 110
+                    },
+                    {
+                        "text": "If the max_features value is an integer (whole number), the model will",
+                        "page": 110
+                    },
+                    {
+                        "text": "consider max_features at each split (branch). If the value is a float (e.g. 0.6),",
+                        "page": 110
+                    },
+                    {
+                        "text": "then max_features is the percentage of total features randomly selected.",
+                        "page": 110
+                    },
+                    {
+                        "text": "Although max_features sets a maximum number of features to consider in",
+                        "page": 110
+                    },
+                    {
+                        "text": "identifying the best split, total features may exceed the max_features limit if",
+                        "page": 110
+                    },
+                    {
+                        "text": "no split can initially be made.",
+                        "page": 110
+                    },
+                    {
+                        "text": "loss",
+                        "page": 110
+                    },
+                    {
+                        "text": "calculates the model's error rate. For this exercise, we are using huber",
+                        "page": 110
+                    },
+                    {
+                        "text": "which protects against outliers and anomalies. Alternative error rate options",
+                        "page": 110
+                    },
+                    {
+                        "text": "include ls (least squares regression), lad (least absolute deviations), and",
+                        "page": 110
+                    },
+                    {
+                        "text": "quantile (quantile regression). Huber is actually a combination of ls and lad.",
+                        "page": 110
+                    },
+                    {
+                        "text": "To learn more about gradient boosting hyperparameters, you may refer to the",
+                        "page": 110
+                    },
+                    {
+                        "text": "Scikit-learn website:",
+                        "page": 110
+                    },
+                    {
+                        "text": "http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html",
+                        "page": 110
+                    },
+                    {
+                        "text": "After imputing the model\u2019s hyperparameters, we will implement Scikit-",
+                        "page": 110
+                    },
+                    {
+                        "text": "learn's fit function to start the model training process.",
+                        "page": 110
+                    },
+                    {
+                        "text": "model.fit(X_train, y_train)",
+                        "page": 110
+                    },
+                    {
+                        "text": "Lastly, we need to use Scikit-learn to save the training model as a file using",
+                        "page": 110
+                    },
+                    {
+                        "text": "the joblib.dump function, which was imported into Jupyter Notebook in Step",
+                        "page": 110
+                    }
+                ]
+            },
+            {
+                "chapter_title": "1. This will allow us to use the training model again in the future for",
+                "page": 110,
+                "sections": [
+                    {
+                        "text": "predicting new real estate property values, without needing to rebuild the",
+                        "page": 110
+                    },
+                    {
+                        "text": "model from scratch.",
+                        "page": 110
+                    },
+                    {
+                        "text": "joblib.dump(model, 'house_trained_model.pkl')",
+                        "page": 110
+                    },
+                    {
+                        "text": "6) Evaluate the results",
+                        "page": 110
+                    },
+                    {
+                        "text": "As mentioned earlier, for this exercise we will use mean absolute error to",
+                        "page": 110
+                    },
+                    {
+                        "text": "evaluate the accuracy of the model.",
+                        "page": 110
+                    },
+                    {
+                        "text": "mse = mean_absolute_error(y_train, model.predict(X_train))",
+                        "page": 110
+                    },
+                    {
+                        "text": "print (\"Training Set Mean Absolute Error: %.2f\" % mse)",
+                        "page": 110
+                    },
+                    {
+                        "text": "Here, we input our y values, which represent the correct results from the",
+                        "page": 110
+                    },
+                    {
+                        "text": "training dataset. The model.predict function is then called on the X training",
+                        "page": 111
+                    },
+                    {
+                        "text": "set",
+                        "page": 111
+                    },
+                    {
+                        "text": "and will generate a prediction with up to two decimal places. The mean",
+                        "page": 111
+                    },
+                    {
+                        "text": "absolute error function will then compare the difference between the model\u2019s",
+                        "page": 111
+                    },
+                    {
+                        "text": "expected predictions and the actual values. The same process is repeated with",
+                        "page": 111
+                    },
+                    {
+                        "text": "the test data.",
+                        "page": 111
+                    },
+                    {
+                        "text": "mse = mean_absolute_error(y_test, model.predict(X_test))",
+                        "page": 111
+                    },
+                    {
+                        "text": "print (\"Test Set Mean Absolute Error: %.2f\" % mse)",
+                        "page": 111
+                    },
+                    {
+                        "text": "Let\u2019s now run the entire model by right-clicking and selecting \u201cRun\u201d or",
+                        "page": 111
+                    },
+                    {
+                        "text": "navigating from the Jupyter Notebook menu: Cell > Run All.",
+                        "page": 111
+                    },
+                    {
+                        "text": "Wait a few seconds for the computer to process the training model. The",
+                        "page": 111
+                    },
+                    {
+                        "text": "results, as shown below, will then appear at the bottom of the notepad.",
+                        "page": 111
+                    },
+                    {
+                        "text": "Training Set Mean Absolute Error: 27157.02",
+                        "page": 111
+                    },
+                    {
+                        "text": "Test Set Mean Absolute Error: 169962.99",
+                        "page": 111
+                    },
+                    {
+                        "text": "For this exercise, our training set mean absolute error is $27,157.02 and the",
+                        "page": 111
+                    },
+                    {
+                        "text": "test set mean absolute error is $169,962.99. This means that on average, the",
+                        "page": 111
+                    },
+                    {
+                        "text": "training set miscalculated the actual property value by a mere $27,157.02.",
+                        "page": 111
+                    },
+                    {
+                        "text": "However, the test set miscalculated by an average of $169,962.99.",
+                        "page": 111
+                    },
+                    {
+                        "text": "This means that our training model was very accurate at predicting the actual",
+                        "page": 111
+                    },
+                    {
+                        "text": "value of properties contained in the training data. While $27,157.02 may",
+                        "page": 111
+                    },
+                    {
+                        "text": "seem like a lot of money, this average error value is low given the maximum",
+                        "page": 111
+                    },
+                    {
+                        "text": "range of our dataset is $8 million. As many of the properties in the dataset are",
+                        "page": 111
+                    },
+                    {
+                        "text": "in excess of seven figures ($1,000,000+), $27,157.02 constitutes a reasonably",
+                        "page": 111
+                    },
+                    {
+                        "text": "low error rate.",
+                        "page": 111
+                    },
+                    {
+                        "text": "But how did the model fare with the test data? These results are less accurate.",
+                        "page": 111
+                    },
+                    {
+                        "text": "The test data provided less indicative predictions with an average error rate of",
+                        "page": 111
+                    },
+                    {
+                        "text": "$169,962.99. A high discrepancy between the training and test data is usually",
+                        "page": 111
+                    },
+                    {
+                        "text": "a key indicator of overfitting. As our model is tailored to the training data, it",
+                        "page": 111
+                    },
+                    {
+                        "text": "stumbled when predicting the test data, which probably contains new patterns",
+                        "page": 111
+                    },
+                    {
+                        "text": "that the model hasn\u2019t adjusted for. The test data, of course, is likely to contain",
+                        "page": 111
+                    },
+                    {
+                        "text": "slightly different patterns and new potential outliers and anomalies.",
+                        "page": 111
+                    },
+                    {
+                        "text": "However, in this case, the difference between the training and test data is",
+                        "page": 111
+                    },
+                    {
+                        "text": "exacerbated by the fact that we configured the model to overfit the training",
+                        "page": 111
+                    },
+                    {
+                        "text": "data. An example of this issue was setting max_depth to \u201c30.\u201d Although",
+                        "page": 111
+                    },
+                    {
+                        "text": "setting a high max_depth improves the chances of the model finding patterns",
+                        "page": 111
+                    },
+                    {
+                        "text": "in the training data, it does tend to lead to overfitting. Another possible cause",
+                        "page": 112
+                    },
+                    {
+                        "text": "is a poor split of the training and test data, but for this model the data was",
+                        "page": 112
+                    },
+                    {
+                        "text": "randomized using Scikit-learn.",
+                        "page": 112
+                    },
+                    {
+                        "text": "Lastly, please take into account that because the training and test data are",
+                        "page": 112
+                    },
+                    {
+                        "text": "shuffled randomly, your own results will differ slightly when replicating this",
+                        "page": 112
+                    },
+                    {
+                        "text": "model on your own machine.",
+                        "page": 112
+                    },
+                    {
+                        "text": "14",
+                        "page": 113
+                    },
+                    {
+                        "text": "MODEL OPTIMIZATION",
+                        "page": 114
+                    },
+                    {
+                        "text": "In the previous chapter we built our first supervised learning model. We now",
+                        "page": 114
+                    },
+                    {
+                        "text": "want to improve its accuracy and reduce the effects of overfitting. A good",
+                        "page": 114
+                    },
+                    {
+                        "text": "place to start is modifying the model\u2019s hyperparameters.",
+                        "page": 114
+                    },
+                    {
+                        "text": "Without changing any other hyperparameters, let\u2019s first start by modifying",
+                        "page": 114
+                    },
+                    {
+                        "text": "max_depth from \u201c30\u201d to \u201c5.\u201d The model now generates the following results:",
+                        "page": 114
+                    },
+                    {
+                        "text": "# Results will differ due to the randomized data split",
+                        "page": 114
+                    },
+                    {
+                        "text": "Training Set Mean Absolute Error: 129412.51",
+                        "page": 114
+                    },
+                    {
+                        "text": "Although the mean absolute error of the training set is higher, this helps",
+                        "page": 114
+                    },
+                    {
+                        "text": "reduce the problem of overfitting and should improve the results of the test",
+                        "page": 114
+                    },
+                    {
+                        "text": "data. Another step to optimize the model is to add more trees. If we set",
+                        "page": 114
+                    },
+                    {
+                        "text": "n_estimators to 250, we see this result:",
+                        "page": 114
+                    },
+                    {
+                        "text": "# Results will differ as per the randomized data split",
+                        "page": 114
+                    },
+                    {
+                        "text": "Training Set Mean Absolute Error: 118130.46",
+                        "page": 114
+                    },
+                    {
+                        "text": "Test Set Mean Absolute Error: 159886.32",
+                        "page": 114
+                    },
+                    {
+                        "text": "This second optimization reduces the training set\u2019s absolute error rate by",
+                        "page": 114
+                    },
+                    {
+                        "text": "approximately $11,000 and we now have a smaller gap between our training",
+                        "page": 114
+                    },
+                    {
+                        "text": "and test results for mean absolute error.",
+                        "page": 114
+                    },
+                    {
+                        "text": "Together, these two optimizations underline the importance of maximizing",
+                        "page": 114
+                    },
+                    {
+                        "text": "and understanding the impact of individual hyperparameters. If you decide to",
+                        "page": 114
+                    },
+                    {
+                        "text": "replicate this supervised machine learning model at home, I recommend that",
+                        "page": 114
+                    },
+                    {
+                        "text": "you test modifying each of the hyperparameters individually and analyze",
+                        "page": 114
+                    },
+                    {
+                        "text": "their impact on mean absolute error. In addition, you will notice changes in",
+                        "page": 114
+                    },
+                    {
+                        "text": "the machine\u2019s processing time based on the hyperparameters selected. For",
+                        "page": 114
+                    },
+                    {
+                        "text": "instance, setting max_depth to \u201c5\u201d reduces total processing time compared to",
+                        "page": 114
+                    },
+                    {
+                        "text": "when it was set to \u201c30\u201d because the maximum number of branch layers are",
+                        "page": 114
+                    },
+                    {
+                        "text": "significantly less. Processing speed and resources will become an important",
+                        "page": 114
+                    },
+                    {
+                        "text": "consideration as you move on to working with larger datasets.",
+                        "page": 114
+                    },
+                    {
+                        "text": "Another important optimization technique is feature selection. As you will",
+                        "page": 114
+                    },
+                    {
+                        "text": "recall, we removed nine features while scrubbing our dataset. Now might be",
+                        "page": 115
+                    },
+                    {
+                        "text": "a good time to reconsider those features and analyze whether they have an",
+                        "page": 115
+                    },
+                    {
+                        "text": "effect on the overall accuracy of the model. \u201cSellerG\u201d would be an interesting",
+                        "page": 115
+                    },
+                    {
+                        "text": "feature to add to the model because the real estate company selling the",
+                        "page": 115
+                    },
+                    {
+                        "text": "property could have some impact on the final selling price.",
+                        "page": 115
+                    },
+                    {
+                        "text": "Alternatively, dropping features from the current model may reduce",
+                        "page": 115
+                    },
+                    {
+                        "text": "processing time without having a significant effect on accuracy\u2014or may",
+                        "page": 115
+                    },
+                    {
+                        "text": "even improve accuracy. To select features effectively, it is best to isolate",
+                        "page": 115
+                    },
+                    {
+                        "text": "feature modifications and analyze the results, rather than applying various",
+                        "page": 115
+                    },
+                    {
+                        "text": "changes at once.",
+                        "page": 115
+                    },
+                    {
+                        "text": "While manual trial and error can be an effective technique to understand the",
+                        "page": 115
+                    },
+                    {
+                        "text": "impact of variable selection and hyperparameters, there are also automated",
+                        "page": 115
+                    },
+                    {
+                        "text": "techniques for model optimization, such as",
+                        "page": 115
+                    },
+                    {
+                        "text": "grid search",
+                        "page": 115
+                    },
+                    {
+                        "text": ".",
+                        "page": 115
+                    },
+                    {
+                        "text": "Grid search allows",
+                        "page": 115
+                    },
+                    {
+                        "text": "you to list a range of configurations you wish to test for each hyperparameter,",
+                        "page": 115
+                    },
+                    {
+                        "text": "and then methodically tests each of those possible hyperparameters. An",
+                        "page": 115
+                    },
+                    {
+                        "text": "automated voting process takes place to determine the optimal model. As the",
+                        "page": 115
+                    },
+                    {
+                        "text": "model must test each possible combination of hyperparameters, grid search",
+                        "page": 115
+                    },
+                    {
+                        "text": "does take a long time to run! Example code for grid search is shown at the",
+                        "page": 115
+                    },
+                    {
+                        "text": "end of this chapter.",
+                        "page": 115
+                    },
+                    {
+                        "text": "Finally, if you wish to use a different supervised machine learning algorithm",
+                        "page": 115
+                    },
+                    {
+                        "text": "and not gradient boosting, much of the code used in this exercise can be",
+                        "page": 115
+                    },
+                    {
+                        "text": "replicated. For instance, the same code can be used to import a new dataset,",
+                        "page": 115
+                    },
+                    {
+                        "text": "preview the dataframe, remove features (columns), remove rows, split and",
+                        "page": 115
+                    },
+                    {
+                        "text": "shuffle the dataset, and evaluate mean absolute error.",
+                        "page": 115
+                    },
+                    {
+                        "text": "http://scikit-learn.org is a great resource to learn more about other algorithms",
+                        "page": 115
+                    },
+                    {
+                        "text": "as well as the gradient boosting used in this exercise.",
+                        "page": 115
+                    },
+                    {
+                        "text": "For a copy of the code, please contact the author at",
+                        "page": 115
+                    },
+                    {
+                        "text": "oliver.theobald@scatterplotpress.com or see the code example below. In",
+                        "page": 115
+                    },
+                    {
+                        "text": "addition, if you have troubles implementing the model using the code found",
+                        "page": 115
+                    },
+                    {
+                        "text": "in this book, please feel free to contact the author by email for extra",
+                        "page": 115
+                    },
+                    {
+                        "text": "assistance at no cost.",
+                        "page": 115
+                    },
+                    {
+                        "text": "Code for the Optimized Model",
+                        "page": 115
+                    },
+                    {
+                        "text": "# Import libraries",
+                        "page": 115
+                    },
+                    {
+                        "text": "import pandas as pd",
+                        "page": 115
+                    },
+                    {
+                        "text": "from sklearn.model_selection import train_test_split",
+                        "page": 115
+                    },
+                    {
+                        "text": "from sklearn import ensemble",
+                        "page": 116
+                    },
+                    {
+                        "text": "from sklearn.metrics import mean_absolute_error",
+                        "page": 116
+                    },
+                    {
+                        "text": "from sklearn.externals import joblib",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Read in data from CSV",
+                        "page": 116
+                    },
+                    {
+                        "text": "df =  pd.read_csv('~/Downloads/Melbourne_housing_FULL-26-09-2017.csv')",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Delete unneeded columns",
+                        "page": 116
+                    },
+                    {
+                        "text": "del df['Address']",
+                        "page": 116
+                    },
+                    {
+                        "text": "del df['Method']",
+                        "page": 116
+                    },
+                    {
+                        "text": "del df['SellerG']",
+                        "page": 116
+                    },
+                    {
+                        "text": "del df['Date']",
+                        "page": 116
+                    },
+                    {
+                        "text": "del df['Postcode']",
+                        "page": 116
+                    },
+                    {
+                        "text": "del df['Lattitude']",
+                        "page": 116
+                    },
+                    {
+                        "text": "del df['Longtitude']",
+                        "page": 116
+                    },
+                    {
+                        "text": "del df['Regionname']",
+                        "page": 116
+                    },
+                    {
+                        "text": "del df['Propertycount']",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Remove rows with missing values",
+                        "page": 116
+                    },
+                    {
+                        "text": "df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=True)",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Convert non-numerical data using one-hot encoding",
+                        "page": 116
+                    },
+                    {
+                        "text": "features_df = pd.get_dummies(df, columns=['Suburb', 'CouncilArea', 'Type'])",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Remove price",
+                        "page": 116
+                    },
+                    {
+                        "text": "del features_df['Price']",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Create X and y arrays from the dataset",
+                        "page": 116
+                    },
+                    {
+                        "text": "X = features_df.as_matrix()",
+                        "page": 116
+                    },
+                    {
+                        "text": "y = df['Price'].as_matrix()",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Split data into test/train set (70/30 split) and shuffle",
+                        "page": 116
+                    },
+                    {
+                        "text": "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Set up algorithm",
+                        "page": 116
+                    },
+                    {
+                        "text": "model = ensemble.GradientBoostingRegressor(",
+                        "page": 116
+                    },
+                    {
+                        "text": "n_estimators=250,",
+                        "page": 116
+                    },
+                    {
+                        "text": "learning_rate=0.1,",
+                        "page": 116
+                    },
+                    {
+                        "text": "max_depth=5,",
+                        "page": 116
+                    },
+                    {
+                        "text": "min_samples_split=4,",
+                        "page": 116
+                    },
+                    {
+                        "text": "min_samples_leaf=6,",
+                        "page": 116
+                    },
+                    {
+                        "text": "max_features=0.6,",
+                        "page": 116
+                    },
+                    {
+                        "text": "loss='huber'",
+                        "page": 116
+                    },
+                    {
+                        "text": ")",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Run model on training data",
+                        "page": 116
+                    },
+                    {
+                        "text": "model.fit(X_train, y_train)",
+                        "page": 116
+                    },
+                    {
+                        "text": "# Save model to file",
+                        "page": 117
+                    },
+                    {
+                        "text": "joblib.dump(model, 'trained_model.pkl')",
+                        "page": 117
+                    },
+                    {
+                        "text": "# Check model accuracy (up to two decimal places)",
+                        "page": 117
+                    },
+                    {
+                        "text": "mse = mean_absolute_error(y_train, model.predict(X_train))",
+                        "page": 117
+                    },
+                    {
+                        "text": "print (\"Training Set Mean Absolute Error: %.2f\" % mse)",
+                        "page": 117
+                    },
+                    {
+                        "text": "mse = mean_absolute_error(y_test, model.predict(X_test))",
+                        "page": 117
+                    },
+                    {
+                        "text": "print (\"Test Set Mean Absolute Error: %.2f\" % mse)",
+                        "page": 117
+                    },
+                    {
+                        "text": "Code for Grid Search Model",
+                        "page": 117
+                    },
+                    {
+                        "text": "# Import libraries, including GridSearchCV",
+                        "page": 117
+                    },
+                    {
+                        "text": "import pandas as pd",
+                        "page": 117
+                    },
+                    {
+                        "text": "from sklearn.model_selection import train_test_split",
+                        "page": 117
+                    },
+                    {
+                        "text": "from sklearn import ensemble",
+                        "page": 117
+                    },
+                    {
+                        "text": "from sklearn.metrics import mean_absolute_error",
+                        "page": 117
+                    },
+                    {
+                        "text": "from sklearn.externals import joblib",
+                        "page": 117
+                    },
+                    {
+                        "text": "from sklearn.model_selection import GridSearchCV",
+                        "page": 117
+                    },
+                    {
+                        "text": "# Read in data from CSV",
+                        "page": 117
+                    },
+                    {
+                        "text": "df = pd.read_csv('~/Downloads/Melbourne_housing_FULL-26-09-2017.csv')",
+                        "page": 117
+                    },
+                    {
+                        "text": "# Delete unneeded columns",
+                        "page": 117
+                    },
+                    {
+                        "text": "del df['Address']",
+                        "page": 117
+                    },
+                    {
+                        "text": "del df['Method']",
+                        "page": 117
+                    },
+                    {
+                        "text": "del df['SellerG']",
+                        "page": 117
+                    },
+                    {
+                        "text": "del df['Date']",
+                        "page": 117
+                    },
+                    {
+                        "text": "del df['Postcode']",
+                        "page": 117
+                    },
+                    {
+                        "text": "del df['Lattitude']",
+                        "page": 117
+                    },
+                    {
+                        "text": "del df['Longtitude']",
+                        "page": 117
+                    },
+                    {
+                        "text": "del df['Regionname']",
+                        "page": 117
+                    },
+                    {
+                        "text": "del df['Propertycount']",
+                        "page": 117
+                    },
+                    {
+                        "text": "# Remove rows with missing values",
+                        "page": 117
+                    },
+                    {
+                        "text": "df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=True)",
+                        "page": 117
+                    },
+                    {
+                        "text": "# Convert non-numerical data using one-hot encoding",
+                        "page": 117
+                    },
+                    {
+                        "text": "features_df = pd.get_dummies(df, columns=['Suburb', 'CouncilArea', 'Type'])",
+                        "page": 117
+                    },
+                    {
+                        "text": "# Remove price",
+                        "page": 117
+                    },
+                    {
+                        "text": "del features_df['Price']",
+                        "page": 117
+                    },
+                    {
+                        "text": "# Create X and y arrays from the dataset",
+                        "page": 117
+                    },
+                    {
+                        "text": "X = features_df.as_matrix()",
+                        "page": 117
+                    },
+                    {
+                        "text": "y = df['Price'].as_matrix()",
+                        "page": 117
+                    },
+                    {
+                        "text": "# Split data into test/train set (70/30 split) and shuffle",
+                        "page": 117
+                    },
+                    {
+                        "text": "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)",
+                        "page": 118
+                    },
+                    {
+                        "text": "# Input algorithm",
+                        "page": 118
+                    },
+                    {
+                        "text": "model = ensemble.GradientBoostingRegressor()",
+                        "page": 118
+                    },
+                    {
+                        "text": "# Set the configurations that you wish to test",
+                        "page": 118
+                    },
+                    {
+                        "text": "param_grid = {",
+                        "page": 118
+                    },
+                    {
+                        "text": "'n_estimators': [300, 600, 1000],",
+                        "page": 118
+                    },
+                    {
+                        "text": "'max_depth': [7, 9, 11],",
+                        "page": 118
+                    },
+                    {
+                        "text": "'min_samples_split': [3, 4, 5],",
+                        "page": 118
+                    },
+                    {
+                        "text": "'min_samples_leaf': [5, 6, 7],",
+                        "page": 118
+                    },
+                    {
+                        "text": "'learning_rate': [0.01, 0.02, 0.6, 0.7],",
+                        "page": 118
+                    },
+                    {
+                        "text": "'max_features': [0.8, 0.9],",
+                        "page": 118
+                    },
+                    {
+                        "text": "'loss': ['ls', 'lad', 'huber']",
+                        "page": 118
+                    },
+                    {
+                        "text": "}",
+                        "page": 118
+                    },
+                    {
+                        "text": "# Define grid search. Run with four CPUs in parallel if applicable.",
+                        "page": 118
+                    },
+                    {
+                        "text": "gs_cv = GridSearchCV(model, param_grid, n_jobs=4)",
+                        "page": 118
+                    },
+                    {
+                        "text": "# Run grid search on training data",
+                        "page": 118
+                    },
+                    {
+                        "text": "gs_cv.fit(X_train, y_train)",
+                        "page": 118
+                    },
+                    {
+                        "text": "# Print optimal hyperparameters",
+                        "page": 118
+                    },
+                    {
+                        "text": "print(gs_cv.best_params_)",
+                        "page": 118
+                    },
+                    {
+                        "text": "# Check model accuracy (up to two decimal places)",
+                        "page": 118
+                    },
+                    {
+                        "text": "mse = mean_absolute_error(y_train, gs_cv.predict(X_train))",
+                        "page": 118
+                    },
+                    {
+                        "text": "print(\"Training Set Mean Absolute Error: %.2f\" % mse)",
+                        "page": 118
+                    },
+                    {
+                        "text": "mse = mean_absolute_error(y_test, gs_cv.predict(X_test))",
+                        "page": 118
+                    },
+                    {
+                        "text": "print(\"Test Set Mean Absolute Error: %.2f\" % mse)",
+                        "page": 118
+                    },
+                    {
+                        "text": "BUG BOUNTY",
+                        "page": 119
+                    },
+                    {
+                        "text": "Thank you for reading this absolute beginners\u2019 introduction to machine",
+                        "page": 119
+                    },
+                    {
+                        "text": "learning. While not customary practice in the publishing industry, we do offer",
+                        "page": 119
+                    },
+                    {
+                        "text": "a financial reward to readers for locating errors or bugs found in this book.",
+                        "page": 119
+                    },
+                    {
+                        "text": "For this genre of writing\u2014statistical-based data modeling\u2014it is not",
+                        "page": 119
+                    },
+                    {
+                        "text": "uncommon for errors to emerge in the eye of the beholder. In other words,",
+                        "page": 119
+                    },
+                    {
+                        "text": "it\u2019s natural for readers to occasionally misinterpret diagrams, copy code",
+                        "page": 119
+                    },
+                    {
+                        "text": "incorrectly or misread important concepts. This is human nature, but to avoid",
+                        "page": 119
+                    },
+                    {
+                        "text": "readers attacking the author with a negative review and affecting future sales",
+                        "page": 119
+                    },
+                    {
+                        "text": "of this title, we invite you to report any bugs by first sending us an email at",
+                        "page": 119
+                    },
+                    {
+                        "text": "oliver.theobald@scatterplotpress.com",
+                        "page": 119
+                    },
+                    {
+                        "text": "This way we can supply further explanations and examples over email to",
+                        "page": 119
+                    },
+                    {
+                        "text": "calibrate your understanding, or in cases where you\u2019re right and we\u2019re wrong,",
+                        "page": 119
+                    },
+                    {
+                        "text": "we offer a monetary reward of USD $20. This way you can make a tidy profit",
+                        "page": 119
+                    },
+                    {
+                        "text": "from your feedback and we can update the book to improve the standard of",
+                        "page": 119
+                    },
+                    {
+                        "text": "content for other readers.",
+                        "page": 119
+                    },
+                    {
+                        "text": "FURTHER RESOURCES",
+                        "page": 120
+                    },
+                    {
+                        "text": "This section lists relevant learning materials for readers that wish to progress",
+                        "page": 120
+                    },
+                    {
+                        "text": "further in the field of machine learning. Please note that certain details listed",
+                        "page": 120
+                    },
+                    {
+                        "text": "in this section, including prices, may be subject to change in the future.",
+                        "page": 120
+                    },
+                    {
+                        "text": "| Machine Learning |",
+                        "page": 120
+                    },
+                    {
+                        "text": "Machine Learning",
+                        "page": 120
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 120
+                    },
+                    {
+                        "text": "Coursera course",
+                        "page": 120
+                    },
+                    {
+                        "text": "Presenter:",
+                        "page": 120
+                    },
+                    {
+                        "text": "Andrew Ng",
+                        "page": 120
+                    },
+                    {
+                        "text": "Cost:",
+                        "page": 120
+                    },
+                    {
+                        "text": "Free",
+                        "page": 120
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 120
+                    },
+                    {
+                        "text": "Beginners (especially those with a preference for",
+                        "page": 120
+                    },
+                    {
+                        "text": "MATLAB)",
+                        "page": 120
+                    },
+                    {
+                        "text": "A free and well-taught introduction from Andrew Ng, one of the most",
+                        "page": 120
+                    },
+                    {
+                        "text": "influential figures in this field. This course has become a virtual rite of",
+                        "page": 120
+                    },
+                    {
+                        "text": "passage for anyone interested in machine learning.",
+                        "page": 120
+                    },
+                    {
+                        "text": "Project 3: Reinforcement Learning",
+                        "page": 120
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 120
+                    },
+                    {
+                        "text": "Online blog tutorial",
+                        "page": 120
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 120
+                    },
+                    {
+                        "text": "EECS Berkeley",
+                        "page": 120
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 120
+                    },
+                    {
+                        "text": "Upper intermediate to advanced",
+                        "page": 120
+                    },
+                    {
+                        "text": "A practical demonstration of reinforcement learning, and Q-learning",
+                        "page": 120
+                    },
+                    {
+                        "text": "specifically, explained through the game Pac-Man.",
+                        "page": 120
+                    },
+                    {
+                        "text": "| Basic Algorithms |",
+                        "page": 120
+                    },
+                    {
+                        "text": "Machine Learning With Random Forests And Decision Trees: A Visual",
+                        "page": 120
+                    },
+                    {
+                        "text": "Guide For Beginners",
+                        "page": 120
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 120
+                    },
+                    {
+                        "text": "E-book",
+                        "page": 120
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 120
+                    },
+                    {
+                        "text": "Scott Hartshorn",
+                        "page": 120
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 120
+                    },
+                    {
+                        "text": "Established beginners",
+                        "page": 120
+                    },
+                    {
+                        "text": "A short, affordable (USD $3.20), and engaging read on decision trees and",
+                        "page": 121
+                    },
+                    {
+                        "text": "random forests with detailed visual examples, useful practical tips, and clear",
+                        "page": 121
+                    },
+                    {
+                        "text": "instructions.",
+                        "page": 121
+                    },
+                    {
+                        "text": "Linear Regression And Correlation: A Beginner's Guide",
+                        "page": 121
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 121
+                    },
+                    {
+                        "text": "E-book",
+                        "page": 121
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 121
+                    },
+                    {
+                        "text": "Scott Hartshorn",
+                        "page": 121
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 121
+                    },
+                    {
+                        "text": "All",
+                        "page": 121
+                    },
+                    {
+                        "text": "A well-explained and affordable (USD $3.20) introduction to linear",
+                        "page": 121
+                    },
+                    {
+                        "text": "regression, as well as correlation.",
+                        "page": 121
+                    },
+                    {
+                        "text": "| The Future of AI |",
+                        "page": 121
+                    },
+                    {
+                        "text": "The Inevitable: Understanding the 12 Technological Forces That Will",
+                        "page": 121
+                    },
+                    {
+                        "text": "Shape Our Future",
+                        "page": 121
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 121
+                    },
+                    {
+                        "text": "E-Book, Book, Audiobook",
+                        "page": 121
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 121
+                    },
+                    {
+                        "text": "Kevin Kelly",
+                        "page": 121
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 121
+                    },
+                    {
+                        "text": "All (with an interest in the future)",
+                        "page": 121
+                    },
+                    {
+                        "text": "A well-researched look into the future with a major focus on AI and machine",
+                        "page": 121
+                    },
+                    {
+                        "text": "learning by The New York Times Best Seller Kevin Kelly. Provides a guide",
+                        "page": 121
+                    },
+                    {
+                        "text": "to twelve technological imperatives that will shape the next thirty years.",
+                        "page": 121
+                    },
+                    {
+                        "text": "Homo Deus: A Brief History of Tomorrow",
+                        "page": 121
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 121
+                    },
+                    {
+                        "text": "E-Book, Book, Audiobook",
+                        "page": 121
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 121
+                    },
+                    {
+                        "text": "Yuval Noah Harari",
+                        "page": 121
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 121
+                    },
+                    {
+                        "text": "All (with an interest in the future)",
+                        "page": 121
+                    },
+                    {
+                        "text": "As a follow-up title to the success of",
+                        "page": 121
+                    },
+                    {
+                        "text": "Sapiens: A Brief History of Mankind,",
+                        "page": 121
+                    },
+                    {
+                        "text": "Yuval Noah Harari examines the possibilities of the future with notable",
+                        "page": 121
+                    },
+                    {
+                        "text": "sections of the book examining machine consciousness, applications in AI,",
+                        "page": 121
+                    },
+                    {
+                        "text": "and the immense power of data and algorithms.",
+                        "page": 121
+                    },
+                    {
+                        "text": "| Programming |",
+                        "page": 121
+                    },
+                    {
+                        "text": "Learning Python",
+                        "page": 121
+                    },
+                    {
+                        "text": ",",
+                        "page": 121
+                    },
+                    {
+                        "text": "5th Edition",
+                        "page": 121
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 122
+                    },
+                    {
+                        "text": "E-Book, Book",
+                        "page": 122
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 122
+                    },
+                    {
+                        "text": "Mark Lutz",
+                        "page": 122
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 122
+                    },
+                    {
+                        "text": "All (with an interest in learning Python)",
+                        "page": 122
+                    },
+                    {
+                        "text": "A comprehensive introduction to Python published by O\u2019Reilly Media.",
+                        "page": 122
+                    },
+                    {
+                        "text": "Hands-On Machine Learning with Scikit-Learn and TensorFlow:",
+                        "page": 122
+                    },
+                    {
+                        "text": "Concepts, Tools, and Techniques to Build Intelligent Systems",
+                        "page": 122
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 122
+                    },
+                    {
+                        "text": "E-Book, Book",
+                        "page": 122
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 122
+                    },
+                    {
+                        "text": "Aur\u00e9lien G\u00e9ron",
+                        "page": 122
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 122
+                    },
+                    {
+                        "text": "All (with an interest in programming in Python, Scikit-",
+                        "page": 122
+                    },
+                    {
+                        "text": "Learn and TensorFlow)",
+                        "page": 122
+                    },
+                    {
+                        "text": "As a highly popular O\u2019Reilly Media book written by machine learning",
+                        "page": 122
+                    },
+                    {
+                        "text": "consultant Aur\u00e9lien G\u00e9ron, this is an excellent advanced resource for anyone",
+                        "page": 122
+                    },
+                    {
+                        "text": "with a solid foundation of machine learning and computer programming.",
+                        "page": 122
+                    },
+                    {
+                        "text": "| Recommendation Systems |",
+                        "page": 122
+                    },
+                    {
+                        "text": "The Netflix Prize and Production Machine Learning Systems: An Insider",
+                        "page": 122
+                    },
+                    {
+                        "text": "Look",
+                        "page": 122
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 122
+                    },
+                    {
+                        "text": "Blog",
+                        "page": 122
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 122
+                    },
+                    {
+                        "text": "Mathworks",
+                        "page": 122
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 122
+                    },
+                    {
+                        "text": "All",
+                        "page": 122
+                    },
+                    {
+                        "text": "A very interesting blog article demonstrating how Netflix applies machine",
+                        "page": 122
+                    },
+                    {
+                        "text": "learning to form movie recommendations.",
+                        "page": 122
+                    },
+                    {
+                        "text": "Recommender Systems",
+                        "page": 122
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 122
+                    },
+                    {
+                        "text": "Coursera course",
+                        "page": 122
+                    },
+                    {
+                        "text": "Presenter:",
+                        "page": 122
+                    },
+                    {
+                        "text": "The University of Minnesota",
+                        "page": 122
+                    },
+                    {
+                        "text": "Cost:",
+                        "page": 122
+                    },
+                    {
+                        "text": "Free 7-day trial or included with $49 USD Coursera subscription",
+                        "page": 122
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 122
+                    },
+                    {
+                        "text": "All",
+                        "page": 122
+                    },
+                    {
+                        "text": "Taught by the University of Minnesota, this Coursera specialization covers",
+                        "page": 122
+                    },
+                    {
+                        "text": "fundamental recommender system techniques including content-based and",
+                        "page": 122
+                    },
+                    {
+                        "text": "collaborative filtering as well as non-personalized and project-association",
+                        "page": 122
+                    },
+                    {
+                        "text": "recommender systems.",
+                        "page": 122
+                    },
+                    {
+                        "text": ".",
+                        "page": 122
+                    },
+                    {
+                        "text": "| Deep Learning |",
+                        "page": 123
+                    },
+                    {
+                        "text": "Deep Learning Simplified",
+                        "page": 123
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 123
+                    },
+                    {
+                        "text": "Blog",
+                        "page": 123
+                    },
+                    {
+                        "text": "Channel:",
+                        "page": 123
+                    },
+                    {
+                        "text": "DeepLearning.TV",
+                        "page": 123
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 123
+                    },
+                    {
+                        "text": "All",
+                        "page": 123
+                    },
+                    {
+                        "text": "A short video series to get you up to speed with deep learning. Available for",
+                        "page": 123
+                    },
+                    {
+                        "text": "free on YouTube.",
+                        "page": 123
+                    },
+                    {
+                        "text": "Deep Learning Specialization: Master Deep Learning, and Break into AI",
+                        "page": 123
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 123
+                    },
+                    {
+                        "text": "Coursera course",
+                        "page": 123
+                    },
+                    {
+                        "text": "Presenter:",
+                        "page": 123
+                    },
+                    {
+                        "text": "deeplearning.ai and NVIDIA",
+                        "page": 123
+                    },
+                    {
+                        "text": "Cost:",
+                        "page": 123
+                    },
+                    {
+                        "text": "Free 7-day trial or included with $49 USD Coursera subscription",
+                        "page": 123
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 123
+                    },
+                    {
+                        "text": "Intermediate to advanced (with experience in Python)",
+                        "page": 123
+                    },
+                    {
+                        "text": "A robust curriculum for those wishing to learn how to build neural networks",
+                        "page": 123
+                    },
+                    {
+                        "text": "in Python and TensorFlow, as well as career advice, and how deep learning",
+                        "page": 123
+                    },
+                    {
+                        "text": "theory applies to industry.",
+                        "page": 123
+                    },
+                    {
+                        "text": "Deep Learning Nanodegree",
+                        "page": 123
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 123
+                    },
+                    {
+                        "text": "Udacity course",
+                        "page": 123
+                    },
+                    {
+                        "text": "Presenter:",
+                        "page": 123
+                    },
+                    {
+                        "text": "Udacity",
+                        "page": 123
+                    },
+                    {
+                        "text": "Cost:",
+                        "page": 123
+                    },
+                    {
+                        "text": "$599 USD",
+                        "page": 123
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 123
+                    },
+                    {
+                        "text": "Upper beginner to advanced, with basic experience in",
+                        "page": 123
+                    },
+                    {
+                        "text": "Python",
+                        "page": 123
+                    },
+                    {
+                        "text": "Comprehensive and practical introduction to convolutional neural networks,",
+                        "page": 123
+                    },
+                    {
+                        "text": "recurrent neural networks, and deep reinforcement learning taught online",
+                        "page": 123
+                    },
+                    {
+                        "text": "over a four-month period. Practical components include building a dog breed",
+                        "page": 123
+                    },
+                    {
+                        "text": "classifier, generating TV scripts, generating faces, and teaching a quadcopter",
+                        "page": 123
+                    },
+                    {
+                        "text": "how to fly.",
+                        "page": 123
+                    },
+                    {
+                        "text": "| Future Careers |",
+                        "page": 123
+                    },
+                    {
+                        "text": "Will a Robot Take My Job?",
+                        "page": 123
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 123
+                    },
+                    {
+                        "text": "Online article",
+                        "page": 123
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 124
+                    },
+                    {
+                        "text": "The BBC",
+                        "page": 124
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 124
+                    },
+                    {
+                        "text": "All",
+                        "page": 124
+                    },
+                    {
+                        "text": "Check how safe your job is in the AI era leading up to the year 2035.",
+                        "page": 124
+                    },
+                    {
+                        "text": "So You Wanna Be a Data Scientist? A Guide to 2015's Hottest Profession",
+                        "page": 124
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 124
+                    },
+                    {
+                        "text": "Blog",
+                        "page": 124
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 124
+                    },
+                    {
+                        "text": "Todd Wasserman",
+                        "page": 124
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 124
+                    },
+                    {
+                        "text": "All",
+                        "page": 124
+                    },
+                    {
+                        "text": "Excellent insight into becoming a data scientist.",
+                        "page": 124
+                    },
+                    {
+                        "text": "The Data Science Venn Diagram",
+                        "page": 124
+                    },
+                    {
+                        "text": "Format:",
+                        "page": 124
+                    },
+                    {
+                        "text": "Blog",
+                        "page": 124
+                    },
+                    {
+                        "text": "Author:",
+                        "page": 124
+                    },
+                    {
+                        "text": "Drew Conway",
+                        "page": 124
+                    },
+                    {
+                        "text": "Suggested Audience:",
+                        "page": 124
+                    },
+                    {
+                        "text": "All",
+                        "page": 124
+                    },
+                    {
+                        "text": "The popular 2010 data science diagram designed by Drew Conway.",
+                        "page": 124
+                    },
+                    {
+                        "text": "DOWNLOADING DATASETS",
+                        "page": 125
+                    },
+                    {
+                        "text": "Before you can start practicing algorithms and building machine learning",
+                        "page": 125
+                    },
+                    {
+                        "text": "models, you will first need data. For beginners starting out in machine",
+                        "page": 125
+                    },
+                    {
+                        "text": "learning, there are a number of options. One is to source your own dataset",
+                        "page": 125
+                    },
+                    {
+                        "text": "from writing a web crawler in Python or utilizing a click-and-drag tool such",
+                        "page": 125
+                    },
+                    {
+                        "text": "as Import.io to crawl the Internet. However, the easiest and best option to get",
+                        "page": 125
+                    },
+                    {
+                        "text": "started is by visiting kaggle.com.",
+                        "page": 125
+                    },
+                    {
+                        "text": "As mentioned throughout this book, Kaggle offers free datasets for",
+                        "page": 125
+                    },
+                    {
+                        "text": "download. This saves you the time and effort of sourcing and formatting your",
+                        "page": 125
+                    },
+                    {
+                        "text": "own dataset. Meanwhile, you also have the opportunity to discuss and",
+                        "page": 125
+                    },
+                    {
+                        "text": "problem-solve with other users on the forum, join competitions, and simply",
+                        "page": 125
+                    },
+                    {
+                        "text": "hang out and talk about data.",
+                        "page": 125
+                    },
+                    {
+                        "text": "Bear in mind, however, that datasets you download from Kaggle will",
+                        "page": 125
+                    },
+                    {
+                        "text": "inherently need some refining (through scrubbing) to tailor to the machine",
+                        "page": 125
+                    },
+                    {
+                        "text": "learning model that you decide to build. Below are four free sample datasets",
+                        "page": 125
+                    },
+                    {
+                        "text": "from Kaggle that may prove useful to your further learning in this field.",
+                        "page": 125
+                    },
+                    {
+                        "text": "World Happiness Report",
+                        "page": 125
+                    },
+                    {
+                        "text": "What countries rank the highest in overall happiness? Which factors",
+                        "page": 125
+                    },
+                    {
+                        "text": "contribute most to happiness? How did country rankings change between the",
+                        "page": 125
+                    },
+                    {
+                        "text": "2015 and 2016 reports? Did any country experience a significant increase or",
+                        "page": 125
+                    },
+                    {
+                        "text": "decrease in happiness? These are the questions you can ask of this dataset",
+                        "page": 125
+                    },
+                    {
+                        "text": "recording happiness scores and rankings using data from the Gallup World",
+                        "page": 125
+                    },
+                    {
+                        "text": "Poll. The scores are based on answers to the main life evaluation questions",
+                        "page": 125
+                    },
+                    {
+                        "text": "asked in the poll.",
+                        "page": 125
+                    },
+                    {
+                        "text": "Hotel Reviews",
+                        "page": 125
+                    },
+                    {
+                        "text": "Does having a five-star reputation lead to more disgruntled guests, and",
+                        "page": 125
+                    },
+                    {
+                        "text": "conversely, can two-star hotels rock the guest ratings by setting low",
+                        "page": 125
+                    },
+                    {
+                        "text": "expectations and over-delivering? Or are one and two-star rated hotels simply",
+                        "page": 125
+                    },
+                    {
+                        "text": "rated low for a reason? Find all this out from this sample dataset of hotel",
+                        "page": 125
+                    },
+                    {
+                        "text": "reviews. This particular dataset covers 1,000 hotels and includes hotel name,",
+                        "page": 125
+                    },
+                    {
+                        "text": "location, review date, text, title, username, and rating. The dataset is sourced",
+                        "page": 125
+                    },
+                    {
+                        "text": "from the Datafiniti\u2019s Business Database, which includes almost every hotel in",
+                        "page": 125
+                    },
+                    {
+                        "text": "the world.",
+                        "page": 126
+                    },
+                    {
+                        "text": "Craft Beers Dataset",
+                        "page": 126
+                    },
+                    {
+                        "text": "Do you like craft beer? This dataset contains a list of 2,410 American craft",
+                        "page": 126
+                    },
+                    {
+                        "text": "beers and 510 breweries collected in January 2017 from CraftCans.com.",
+                        "page": 126
+                    },
+                    {
+                        "text": "Drinking and data crunching is perfectly legal.",
+                        "page": 126
+                    },
+                    {
+                        "text": "Brazil's House of Deputies Reimbursements",
+                        "page": 126
+                    },
+                    {
+                        "text": "As politicians in Brazil are entitled to receive refunds from money spent on",
+                        "page": 126
+                    },
+                    {
+                        "text": "activities to \u201cbetter serve the people,\u201d there are interesting findings and",
+                        "page": 126
+                    },
+                    {
+                        "text": "suspicious outliers to be found in this dataset. Data on these expenses are",
+                        "page": 126
+                    },
+                    {
+                        "text": "publicly available, but there is very little monitoring of expenses in Brazil. So",
+                        "page": 126
+                    },
+                    {
+                        "text": "don\u2019t be surprised to see one public servant racking up over 800 flights in",
+                        "page": 126
+                    },
+                    {
+                        "text": "twelve months, and another that recorded R 140,000 (USD $44,500) on post",
+                        "page": 126
+                    },
+                    {
+                        "text": "expenses\u2014yes, snail mail!",
+                        "page": 126
+                    },
+                    {
+                        "text": "FINAL WORD",
+                        "page": 127
+                    },
+                    {
+                        "text": "Thank you for purchasing this book. You now have a baseline understanding",
+                        "page": 127
+                    },
+                    {
+                        "text": "of the key concepts in machine learning and are ready to tackle this",
+                        "page": 127
+                    },
+                    {
+                        "text": "challenging subject in earnest. This includes learning the vital programming",
+                        "page": 127
+                    },
+                    {
+                        "text": "component of machine learning.",
+                        "page": 127
+                    },
+                    {
+                        "text": "To further your study of machine learning, I strongly recommend that you",
+                        "page": 127
+                    },
+                    {
+                        "text": "enroll in the free Andrew Ng Machine Learning course offered on Coursera.",
+                        "page": 127
+                    },
+                    {
+                        "text": "If you have any direct feedback, both positive and negative, or suggestions to",
+                        "page": 127
+                    },
+                    {
+                        "text": "improve this book, please feel free to send me an email at",
+                        "page": 127
+                    },
+                    {
+                        "text": "oliver.theobald@scatterplotpress.com. This feedback is highly valued and I",
+                        "page": 127
+                    },
+                    {
+                        "text": "look forward to hearing from you.",
+                        "page": 127
+                    },
+                    {
+                        "text": "Finally, I would like to express my gratitude to my colleagues Jeremy",
+                        "page": 127
+                    },
+                    {
+                        "text": "Pederson and Rui Xiong for their assistance in kindly sharing practical",
+                        "page": 127
+                    },
+                    {
+                        "text": "machine learning tips and some code used in this book.",
+                        "page": 127
+                    },
+                    {
+                        "text": "Thank you,",
+                        "page": 127
+                    },
+                    {
+                        "text": "Oliver Theobald",
+                        "page": 127
+                    },
+                    {
+                        "text": "[1]",
+                        "page": 128
+                    },
+                    {
+                        "text": "BBC,",
+                        "page": 128
+                    },
+                    {
+                        "text": "Will A Robot Take My Job?",
+                        "page": 128
+                    },
+                    {
+                        "text": ", 2015, http://www.bbc.com/news/technology-34066941",
+                        "page": 128
+                    },
+                    {
+                        "text": "[2]",
+                        "page": 128
+                    },
+                    {
+                        "text": "Nearshore Americas, Machine Learning Adoption Thwarted by Lack of Skills and Understanding, 2017, http://www.nearshoreamericas.com",
+                        "page": 128
+                    },
+                    {
+                        "text": "[3]",
+                        "page": 128
+                    },
+                    {
+                        "text": "Arthur Samuel,",
+                        "page": 128
+                    },
+                    {
+                        "text": "Some Studies in Machine Learning Using the Game of Checkers",
+                        "page": 128
+                    },
+                    {
+                        "text": ",",
+                        "page": 128
+                    },
+                    {
+                        "text": "IBM Journal of Research and Development, Vol. 3, Issue. 3, 1959.",
+                        "page": 128
+                    },
+                    {
+                        "text": "[4]",
+                        "page": 128
+                    },
+                    {
+                        "text": "Arthur Samuel,",
+                        "page": 128
+                    },
+                    {
+                        "text": "Some Studies in Machine Learning Using the Game of Checkers",
+                        "page": 128
+                    },
+                    {
+                        "text": ",",
+                        "page": 128
+                    },
+                    {
+                        "text": "IBM Journal of Research and Development, Vol. 3, Issue. 3, 1959.",
+                        "page": 128
+                    },
+                    {
+                        "text": "[5]",
+                        "page": 128
+                    },
+                    {
+                        "text": "DataVisor, Unsupervised Machine Learning Engine, 2017, https://www.datavisor.com/unsupervised-machine-learning-engine/",
+                        "page": 128
+                    },
+                    {
+                        "text": "[6]",
+                        "page": 128
+                    },
+                    {
+                        "text": "Kevin Kelly, The Inevitable: Understanding the 12 Technological Forces That Will Shape Our Future, Penguin Books, 2016.",
+                        "page": 128
+                    },
+                    {
+                        "text": "[7]",
+                        "page": 128
+                    },
+                    {
+                        "text": "Torch, What is Torch? http://torch.ch/, 2017",
+                        "page": 128
+                    }
+                ]
+            }
+        ]
+    }
+]
